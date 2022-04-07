@@ -1,0 +1,2136 @@
+ETH_EN(GPE16): 0(dflt)->0(set-low)->mdelay(1)->1(set-high)
+
+
+U-Boot 2010.09 (Oct 11 2017 - 20:22:28)GCT GDM7243
+
+Build Info:
+  date: 2017/10/11-20:22:32
+  user: root@ubuntu
+  svnr:
+  src: /home/bbwang/work/test/BOLT_ODU/SDK/work_BOLT/uboot
+  ver: 0.54s2m
+
+DRAM:  128 MiB (wbd-p2) 1Gb
+NAND:  Built-in ECC Nand
+maf_id : 0x00000098, dev_id : 0x000000a1
+Pagesize : 2Kbytes
+Address cycle : 4
+128 MiB
+Bad block table found at page 65472, version 0x01
+Bad block table found at page 65408, version 0x01
+nand_read_bbt: Bad block at 0x000001f40000
+nand_read_bbt: Bad block at 0x000003300000
+nand_read_bbt: Bad block at 0x000006000000
+nand_read_bbt: Bad block at 0x000007060000
+In:    serial
+Out:   serial
+Err:   serial
+Net:    001cc910 Realtek8211  PHYCR1: 00002118-0000211c  Rx delay: 0x00802300
+        PHYCR2:0x0863->0x0842  mii0
+Hit ENTER key to stop autoboot:  0
+00420000
+---------------------
+hdr chksum  : 0xae3b07bb
+magic       : 0xcafebabe
+timstamp    : 0x0000007d
+data chksum : 0x1098b79f
+data size   : 0x0001ffdc
+---------------------
+00440000
+---------------------
+hdr chksum  : 0xb5fb0822
+magic       : 0xcafebabe
+timstamp    : 0x00000084
+data chksum : 0x5d86c1ba
+data size   : 0x0001ffdc
+---------------------
+cmnnv current block is : 1
+pesifwcheck=1
+
+boot from part_idx: 1
+do_check_partition() type:linux, Data checksum is OK!!!(w:2d8750f9/r:2d8750f9)!!!
+do_check_partition() type:rootfs, Skipping bad block 0x01f40000
+Data checksum is OK!!!(w:f39e8c6b/r:f39e8c6b)!!!
+
+---------------------
+hdr chksum  : 0x997c0678
+magic       : 0xcafebabe
+timstamp    : 0x00000005
+data chksum : 0x2d8750f9
+data size   : 0x00255598
+---------------------
+---------------------
+hdr chksum  : 0x99670677
+magic       : 0xcafebabe
+timstamp    : 0x00000004
+data chksum : 0x2d8750f9
+data size   : 0x00255598
+---------------------
+select partition
+part name : linux
+offset    : 0x00a00000
+size      : 0x00400000
+---------------------
+hdr chksum  : 0x00000000
+magic       : 0x00000000
+timstamp    : 0x00000000
+data chksum : 0x00000000
+data size   : 0x00000000
+---------------------
+---------------------
+hdr chksum  : 0x00000000
+magic       : 0x00000000
+timstamp    : 0x00000000
+data chksum : 0x00000000
+data size   : 0x00000000
+---------------------
+no valid header(2)
+---------------------
+hdr chksum  : 0x99ca0622
+magic       : 0xcafebabe
+timstamp    : 0x00000005
+data chksum : 0xf39e8c6b
+data size   : 0x01300000
+---------------------
+---------------------
+hdr chksum  : 0x99b50621
+magic       : 0xcafebabe
+timstamp    : 0x00000004
+data chksum : 0xf39e8c6b
+data size   : 0x01300000
+---------------------
+select partition
+part name : rootfs
+offset    : 0x01200000
+size      : 0x01e00000
+---------------------
+hdr chksum  : 0x00000000
+magic       : 0x00000000
+timstamp    : 0x00000000
+data chksum : 0x00000000
+data size   : 0x00000000
+---------------------
+---------------------
+hdr chksum  : 0x00000000
+magic       : 0x00000000
+timstamp    : 0x00000000
+data chksum : 0x00000000
+data size   : 0x00000000
+---------------------
+no valid header(2)
+bootdelay=1
+bootargs (default)
+## Booting kernel from Legacy Image at d05fffc0 ...
+   Image Name:   Linux-3.10.0-uc0
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    2446680 Bytes = 2.3 MiB
+   Load Address: d0600000
+   Entry Point:  d0600000
+   Verifying Checksum ... OK
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+Booting Linux on physical CPU 0x0
+Initializing cgroup subsys cpu
+Initializing cgroup subsys cpuacct
+Linux version 3.10.0-uc0 (fftang@pesi-xian) (gcc version 4.7.3 (Buildroot 2013.08.1) ) #1 Thu Aug 9 15:00:39 CST 2018
+CPU: ARMv7 Processor [410fc074] revision 4 (ARMv7), cr=12c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Machine: GCT GDM7243
+Boot device: nand
+boot mem size: 80MB
+READ ONLY FILESYSTEM
+FW Checksum: disable
+Active linux : linux
+Active rootfs: rootfs
+Active tk    : unknown
+Memory policy: ECC disabled, Data cache writeback
+CPU: GDM7243Q R0B [0x72430100]
+ARM:
+  CR: 12c53c7d
+  ACR: 00006040
+CPU: xtal 19.200 MHz, pll 833.280 MHz arm 833.280 MHz, clk(1x) 104.160 MHz
+CPU: All CPU(s) started in SVC mode.
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 20320
+Kernel command line: console=ttyS0,921600 boot=nand mem=80M ubi.mtd=10,2048 root=ubi0:rootfs ro rootfstype=ubifs mtdparts=gdm7243:512k(u-boot),512k(env),1m(rev0),1m(ltenv),1m(wmnv),1m(cmnnv),1m(cmnnv2),4m(rev1),4m(linux),4m(linux2),30m(rootfs),30m(rootfs2),5m(tk),5m(tk2),512k(customize),2560k(log),32m(update) bl_ver=0.54s2m lcd=none checksum=disable active=linux,rootfs,unknown
+PID hash table entries: 1024 (order: 0, 4096 bytes)
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Memory: 80MB = 80MB total
+Memory: 75576k/75576k available, 6344k reserved, 0K highmem
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+    vmalloc : 0xd5800000 - 0xff000000   ( 664 MB)
+    lowmem  : 0xd0000000 - 0xd5000000   (  80 MB)
+    modules : 0xcf000000 - 0xd0000000   (  16 MB)
+      .text : 0xd0008000 - 0xd04359a8   (4279 kB)
+      .init : 0xd0436000 - 0xd0454bcc   ( 123 kB)
+      .data : 0xd0456000 - 0xd04f88c0   ( 651 kB)
+       .bss : 0xd04fac5c - 0xd056dbd8   ( 460 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+NR_IRQS:64
+[CLK] 1x:-1 is 1:104160000
+[CLK] timers:-1 is 1:0
+gdm_set_mode
+ CLOCK_EVT_MODE_SHUTDOWN
+gdm_set_mode
+ CLOCK_EVT_MODE_PERIODIC
+sched_clock: 32 bits at 32kHz, resolution 30517ns, wraps every 131071999ms
+RTC: secondary(external) 32.768KHz osc
+RTC Interrupt Enabled!
+rtc_boot_base=00042462
+console [ttyS0] enabled
+Calibrating delay loop... 1652.73 BogoMIPS (lpj=826368)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0xd0334430 - 0xd0334488
+SYS_STA: 0x0(POR)
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+Build Info:
+  date: 2018/08/09-14:59:40
+  user: fftang@pesi-xian
+  svnr: r10829
+  pkgv: 0.59.3.41.0
+  appv: 0.59.3.41.0
+  src: /home/fftang/_bolt/BOLT_ODU/SDK/work_BOLT_RGMII
+Config Info:
+  PRODUCT: gdm7243q
+  PLATFORM_STANDALONE
+  HZ=1000
+  NET_NATQ2
+  NET_VLANQ
+  VLAN_8021Q
+  RTC_TIMER
+  PM_IDLE
+  PM_IDLE_DFRD_TIMER
+  IPC_CACHEABLE
+DDR: id=3(ELPIDA) rev=2,0
+GDM HL IF(v0.6) initialized
+bio: create slab <bio-0> at 0
+Switching to clocksource rtccs
+NET: Registered protocol family 2
+TCP established hash table entries: 1024 (order: 1, 8192 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+TCP: reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+VLAN: vlan_no_skip_ra=0
+cpu lock_reg:
+  active=d4822894
+  free  =d4822898
+gipc-protocol(d4822800): va=d4822800, pa=d4822800 ver=0105
+ipc cacheable
+ipc init ch=0
+ipc ch[0]:CTRL, irb: va=d4823000-d4823640 pa=d4823000-d4823640
+ipc ch[0]:CTRL, irb_work: va=d4960000-d49602a0 pa=d4960000-d49602a0
+  irb nr: tx=16(2080bytes) rx=64(2080bytes)
+   irb tx: va=d4823000-d4823140 pa=d4823000-d4823140
+   irb rx: va=d4823148-d4823648 pa=d4823148-d4823648
+  m-ch_enabled=0x1
+ipc init ch=28
+ipc ch[28]:DBG, irb: va=d480b000-d480ba28 pa=d480b000-d480ba28
+ipc ch[28]:DBG, irb_work: va=d4823800-d4823c30 pa=d4823800-d4823c30
+  irb nr: tx=2(2080bytes) rx=128(2080bytes)
+   irb tx: va=d480b000-d480b028 pa=d480b000-d480b028
+   irb rx: va=d480b030-d480ba30 pa=d480b030-d480ba30
+  m-ch_enabled=0x10000001
+IPCIF(v0.2) initialized
+IPC Ver: 0.5
+  IPC_IF_RX_LIMIT=100
+exFAT: Version 1.2.9
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+msgmni has been set to 147
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+i2c /dev entries driver
+Initialize gdm-i2c
+Probe gdm-i2c
+i2c bus frequency set to 400 KHz
+i2c-0: GDM I2C adapter
+PMIC SWREGADJ1=0xb
+ECOSWREG: 1f
+PMIC GMT-G5851(id:12) probed!
+gdm-uart.0: ttyS0 at I/O 0xfc007500 (irq = 2) is a gdm-uart
+gdm-uart.1: ttyS1 at I/O 0xfc007540 (irq = 21) is a gdm-uart
+gdm-uart.2: ttyS2 at I/O 0xfc007580 (irq = 33) is a gdm-uart
+gdm-uart.3: ttyS3 at I/O 0xfc007600 (irq = 12) is a gdm-uart
+[USIM] : GDM USIM device driver (1.1.7)
+Serial flash ID[00000000]
+Serial flash driver MAJOR[140]
+start : c4000000, regs : d6000000, area : d4a7f600, size : 16777216
+brd: module loaded
+GDM7243 NAND Driver (1.22), GCT Semiconductor, Ltd.
+Built-in Ecc Nand
+fault_ecc_nr=4
+ecc_chk_loop_nr=3
+chk_correctable_ecc=0
+NAND: pagesize : 2K
+NAND device: Manufacturer ID: 0x98, Chip ID: 0xa1 (Toshiba NAND 128MiB 1,8V 8-bit), 128MiB, page size: 2048, OOB size: 64
+Bad block table found at page 65472, version 0x01
+Bad block table found at page 65408, version 0x01
+nand_read_bbt: bad block at 0x000001f40000
+nand_read_bbt: bad block at 0x000003300000
+nand_read_bbt: bad block at 0x000006000000
+nand_read_bbt: bad block at 0x000007060000
+17 cmdlinepart partitions found on MTD device gdm7243
+17 cmdlinepart partitions found on MTD device gdm7243
+Creating 17 MTD partitions on "gdm7243":
+0x000000000000-0x000000080000 : "u-boot"
+0x000000080000-0x000000100000 : "env"
+0x000000100000-0x000000200000 : "rev0"
+0x000000200000-0x000000300000 : "ltenv"
+0x000000300000-0x000000400000 : "wmnv"
+0x000000400000-0x000000500000 : "cmnnv"
+0x000000500000-0x000000600000 : "cmnnv2"
+0x000000600000-0x000000a00000 : "rev1"
+0x000000a00000-0x000000e00000 : "linux"
+0x000000e00000-0x000001200000 : "linux2"
+0x000001200000-0x000003000000 : "rootfs"
+0x000003000000-0x000004e00000 : "rootfs2"
+0x000004e00000-0x000005300000 : "tk"
+0x000005300000-0x000005800000 : "tk2"
+0x000005800000-0x000005880000 : "customize"
+0x000005880000-0x000005b00000 : "log"
+0x000005b00000-0x000007b00000 : "update"
+---------------------
+hdr chksum  : 0xae3b07bb
+magic       : 0xcafebabe
+timstamp    : 0x0000007d
+data chksum : 0x1098b79f
+data size   : 0x0001ffdc
+---------------------
+---------------------
+hdr chksum  : 0xb5fb0822
+magic       : 0xcafebabe
+timstamp    : 0x00000084
+data chksum : 0x5d86c1ba
+data size   : 0x0001ffdc
+---------------------
+PHYCR1: 0x211c
+MII_CLK_CTRL(0xfc000450)=0x00802300
+MII_LCR: 00006251->00006e51
+PHYCR2: 0x842
+gdm-rgmii at 0xec0c0000 irq=15 (00:0a:3b:f0:01:30) with Realtek RTL8211 PHY(at 00)
+gdm-ether ver 1.4
+dwc3_probe entered
+dwc2 dwc2: no platform data or transceiver defined
+platform dwc2: Driver dwc2 requests probe deferral
+mousedev: PS/2 mouse device common for all mice
+mmc0: sdh base clock=200MHz
+mmc: [MAIN CLOCK]: gdm-sdhost - 200Mhz
+mmc0: SDH Clock  freq = 200MHz, Timeout Clock freq = 1KHz
+mmc0: host caps([0]=67e8c881 [1]=01000003) caps=4007800f
+mmc0: clk=0 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mmc0: SDH voltage switch to 3.3V
+mmc0: clk=400000 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mmc0: at ec0b0000 irq 16 SDMA
+mmc: ucfg_multi_sdhost=-1
+sdhost1=0
+mmc: sdhci_init ret=0
+natq ver: 0.6.0 qnr=4096
+Netfilter messages via NETLINK v0.30.
+ipip: IPv4 over IPv4 tunneling driver
+TCP: cubic registered
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+Bridge firewalling registered
+Ebtables v2.0 registered
+8021q: 802.1Q VLAN Support v1.8
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 4
+PM ver 1.0.1
+GDM PM enabled(SYS_GLB_CTRL:00000000)
+PM_PMIC_RF_OFF disabled
+wfds_ms=25
+aom memcpy(f4000000, d04f9000, 7136): d=38402de9 s=d3010ef1
+aom memcpy done
+GDM PM Inited: SYS_GLB_CTRL=0333c244(wfds=24993us)
+RF SPI:
+  02=002da492
+  2e=005b6410
+  ee=000f3c00
+  fd=00000000
+MTD Crash partition /dev/mtd7
+ipc mux irb nr(0->128) bsize(0->4128)
+ipc init ch=16
+ipc ch[16]:MUX, irb: va=d480e000-d480ea28 pa=d480e000-d480ea28
+ipc ch[16]:MUX, irb_work: va=d4b1f000-d4b1f430 pa=d4b1f000-d4b1f430
+  irb nr: tx=2(4128bytes) rx=128(4128bytes)
+   irb tx: va=d480e000-d480e028 pa=d480e000-d480e028
+   irb rx: va=d480e030-d480ea30 pa=d480e030-d480ea30
+  m-ch_enabled=0x10010001
+dwc2 dwc2: no platform data or transceiver defined
+platform dwc2: Driver dwc2 requests probe deferral
+UBI: attaching mtd10 to ubi0
+UBI: scanning is finished
+UBI: attached mtd10 (name "rootfs", size 30 MiB) to ubi0
+UBI: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+UBI: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+UBI: VID header offset: 2048 (aligned 2048), data offset: 4096
+UBI: good PEBs: 239, bad PEBs: 1, corrupted PEBs: 0
+UBI: user volume: 1, internal volumes: 1, max. volumes count: 128
+UBI: max/mean erase counter: 1/0, WL threshold: 4096, image sequence number: 1222248870
+UBI: available PEBs: 0, total reserved PEBs: 239, PEBs reserved for bad PEB handling: 19
+UBI: background thread "ubi_bgt0d" started, PID 872
+em_mode=0x00000800:
+b[0]=REBOOT_ON_LINUX_CRASH(off)
+b[1]=REBOOT_ON_APP_CRASH(off)
+b[8]=REBOOT_ON_MODEM_CRASH(off)
+b[9]=REBOOT_ON_MODEM_WDT(off)
+b[10]=RELOAD_ON_MODEM_CRASH(off)
+b[11]=RELOAD_ON_MODEM_WDT(ON)
+uart port[0] fc=0 cr=0000002b
+UBIFS: mounted UBI device 0, volume 0, name "rootfs", R/O mode
+UBIFS: LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+UBIFS: FS size: 26157056 bytes (24 MiB, 206 LEBs), journal size 6729728 bytes (6 MiB, 53 LEBs)
+UBIFS: reserved for root: 0 bytes (0 KiB)
+UBIFS: media format: w4/r0 (latest is w4/r0) , small LPT model
+VFS: Mounted root (ubifs filesystem) readonly on device 0:10.
+Freeing unused kernel memory: 120K (d0436000 - d0454000)
+starting pid 876, tty '': '/etc/init.d/rcS'
+mmc0: clk=400000 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mmc0: clk=400000 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mmc0: clk=400000 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mmc0: clk=0 vdd=0(Off) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mmc0: clk=0 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mmc0: SDH voltage switch to 3.3V
+mmc0: clk=300000 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mmc0: clk=300000 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mmc0: clk=300000 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mmc0: clk=300000 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mmc0: clk=0 vdd=0(Off) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mmc0: clk=0 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mmc0: SDH voltage switch to 3.3V
+mmc0: clk=200000 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+devpts: called with bogus options
+mmc0: clk=200000 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mmc0: clk=200000 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+jffs2: Empty flash at 0x000e5250 ends at 0x000e5800
+jffs2: Empty flash at 0x000fb100 ends at 0x000fb800
+mmc0: clk=200000 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mmc0: clk=0 vdd=0(Off) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mmc0: clk=0 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+jffs2: Empty flash at 0x0018aa0c ends at 0x0018b000
+jffs2: jffs2_scan_inode_node(): CRC failed on node at 0x00193ff4: Read 0xffffffff, calculated 0x256bc33c
+jffs2: Empty flash at 0x00194038 ends at 0x00194800
+mmc0: SDH voltage switch to 3.3V
+mmc0: clk=100000 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mmc0: clk=100000 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mmc0: clk=100000 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mkdir: can't create directory '/var/log': File exists
+mkdir: can't create directory '/var/log/pocket': File exists
+mmc0: clk=100000 vdd=21(3.3V) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+mmc0: clk=0 vdd=0(Off) dtype=0 ctrl=0 speed=FS xbit ctrl2=0
+Welcome to
+
+  G C T   L T E   M O D E M
+===== update kernel checksum start =====
+fw_checksum update start...
+[NV] :  GDM NVM library (2.2)
+[NV] NV_MAP : NV_LTE_7243Q
+[NV] LTE NV Init active block (NV 0 : 0x00020000)
+[NV] LTE NV2 Init active block (NV 0 : 0x00020000)
+type: 8
+hdr->data_chk: 2d8750f9, data_chk: 2d8750f9
+map_info_cur_blk_idx=0
+fw_checksum update end...
+kernel checksum update unnecessary.
+===== update kernel checksum end =====
+===== update rootfs checksum start =====
+fw_checksum update start...
+type: 10
+hdr->data_chk: f39e8c6b, data_chk: f39e8c6b
+map_info_cur_blk_idx=0
+fw_checksum update end...
+rootfs checksum update unnecessary.
+===== update rootfs checksum end =====
+cache_init - wait the semaphore
+cache_init - enter critical section
+cache_init - exit critical section
+1. BUILD_ATO_7243 = 0
+[gps_conversion] else case for name:BUILD_ATO_7243
+nvram_set success.
+## Error: "pesiRestoreDefault" not defined
+, do nothing.
+[backup_check_customized] backup filename:/var/log/pocket/customized_backup
+[backup_check_customized] customized_backup remains the same as customzied
+chmod: /usr/pocket: Read-only file system
+chmod: /usr/pocket: Read-only file system
+[gps_conversion] else case for name:uboot_ver
+nvram_set success.
+=== U-Boot version: 0.54s2m ===
+Start syslogd
+readtimes[1]:RUN_TELNETD = 1
+start log daemon
++modprobe modem modem_bootp="product_id=0x000d, operator_id=0x000a"
+boot param: product_id=0x000d, operator_id=0x000a, boot_mode=0, gipc_phy_base=0xd4822800, mem_base=0xd0000000, mem_size=0x5000000, compat=0x1
+---------------------
+hdr chksum  : 0xae3b07bb
+magic       : 0xcafebabe
+timstamp    : 0x0000007d
+data chksum : 0x1098b79f
+data size   : 0x0001ffdc
+---------------------
+---------------------
+hdr chksum  : 0xb5fb0822
+magic       : 0xcafebabe
+timstamp    : 0x00000084
+data chksum : 0x5d86c1ba
+data size   : 0x0001ffdc
+---------------------
+read from fs
+modem map info:
+  [0] pa(d5100000)->va(d8000000)
+decompress gz(1f 8b) at 0xd5100000... (3367919bytes)
+decompress done(6624848bytes)
+dwc2 dwc2: no platform data or transceiver defined
+platform dwc2: Driver dwc2 requests probe deferral
+-modprobe modem
+cat: can't open '/etc/inetd.conf': No such file or directory
+ RUN_TELNETD enable , start telnetd !
+TK: gipc-protocol addr(v2)=d4822800 magic=4054 ver=0105(0105)
+TK: cpu lock_reg:
+TK:   active=d4822894
+TK:   free  =d4822898
+TK: ipc config=00000014
+TK:   router-device
+TK: ipc init ch=0
+TK:   peer-genirq=fc002c28(1)
+TK:   s-ch_enabled=0x10010001
+TK: ipc init ch=16
+TK:   peer-genirq=fc002c28(1)
+TK:   s-ch_enabled=0x10010001
+TK: ipc init ch=28
+TK:   peer-genirq=fc002c28(1)
+TK:   s-ch_enabled=0x10010001
+
+============================================================================
+ uT-Kernel R-21091 (branches / rev17602-20170801 : GDM7243Q_48MB_VOLTE : 48MB)
+----------------------------------------------------------------------------
+ - joejung@cae2
+ - gcc version 6.1.0 (Buildroot 2016.08-git-02646-gf0fa2d1)
+ - #0 Thu Mar 8 15:08:11 KST 2018
+============================================================================
+[MMU] VA:D0000000  PA:D0000000  SZ:80MB  ATTR:0001140E
+[MMU]    D4FFFFFF  PA:D4FFFFFF
+[MMU] VA:FFF00000  PA:D5000000  SZ: 1MB  ATTR:0000140E
+[MMU]    FFFFFFFF  PA:D50FFFFF
+[MMU] VA:FC000000  PA:FC000000  SZ:63MB  ATTR:00000412
+[MMU]    FFEFFFFF  PA:FFEFFFFF
+[MMU] VA:F4000000  PA:F4000000  SZ: 1MB  ATTR:00001412
+[MMU]    F40FFFFF  PA:F40FFFFF
+[MMU] VA:D6700000  PA:D6700000  SZ:24MB  ATTR:0000040A
+[MMU]    D7EFFFFF  PA:D7EFFFFF
+[MMU] VA:D7F00000  PA:D7F00000  SZ: 1MB  ATTR:00001412
+[MMU]    D7FFFFFF  PA:D7FFFFFF
+[CPU] ARMv7 Processor [410fc074] revision 4 (ARMv7) cr=12c5387d
+[CACHE] cache: 512 bytes 1-way 64 byte lines 8 sets
+[CACHE] D cache: write-back cache
+[VFP] implementor 41 arch 2 part 30 variant 7 rev 4
+[MEM] WT DRAM zero initialized 25165008(24575KB)bytes from d6700000 to d7effcd0
+[MEM] NCH DRAM zero initialized 0(0KB)bytes from d7f79b48 to d7f79b48
+[CHIP] GDM7243Q(Rev.0B)
+[CLOCK] arm(833.280MHz) 1x(104.160MHz)
+[PM] GDM Power Management
+[MEM]  total : 0xd5000000 - 0xd8000000 (   48 MB)
+[MEM]  .init : 0xd5100000 - 0xd5106b6c (   27 kB)
+[MEM]  .text : 0xd5100000 - 0xd5709f4c ( 6184 kB)
+[MEM]  .data : 0xd570a000 - 0xd57515a0 (  286 kB)
+[MEM]   .bss : 0xd5751650 - 0xd5a13c04 ( 2826 kB)
+[MEM]  .heap : 0xd5a14000 - 0xd6700000 (13232 kB)
+
+
+########################################
+####    7243 Board Configuration    ####
+########################################
+Operator: [0x000a]
+Product : [0x000d]
+
+## LTE CONFIG
+ - Combined attach : [0]
+ - UE CAPABILITY
+        > UE Category  : [7 (7/13)]
+        > AS Rel Num   : [4]
+        > Multi-Band   : [1]
+        > FGI          : FDD [FE0DD89E 00000000 3A310000]
+        >              : TDD [FE0DD89E 00000000 3A310000]
+        > ROHC         : [1]
+        > eMBMS        : [0]
+        > TM           : [00/00/11]
+ - CA mode enabled(2)
+ - UL64QAM : [2]
+
+[console] crash enabled
+[console] gdm_ipc enabled
+[console] gdm_uart0 enabled
+
+
+GCT GDM VoLTE Core - 1.0
+----------------------------------------------------------------------------
+ LTE - FW ver: 0.3.2.14
+----------------------------------------------------------------------------
+nv_checksum_info: 0
+lte driver ver 1.0.2
+VLANQ register lte0pdn0 tag=100 en=0
+VLANQ register lte0pdn1 tag=101 en=0
+VLANQ register lte0pdn2 tag=102 en=0
+VLANQ register lte0pdn3 tag=103 en=0
+VLANQ register lte0pdn4 tag=104 en=0
+VLANQ register lte0pdn5 tag=105 en=0
+VLANQ register lte0pdn6 tag=106 en=0
+VLANQ register lte0pdn7 tag=107 en=0
+VLANQ register lte0pdn8 tag=108 en=0
+VLANQ register lte0pdn9 tag=109 en=0
+VLANQ register lte0pdn10 tag=110 en=0
+VLANQ register lte0pdn11 tag=111 en=0
+VLANQ register lte0pdn12 tag=112 en=0
+VLANQ register lte0pdn13 tag=113 en=0
+VLANQ register lte0pdn14 tag=114 en=0
+VLANQ register lte0pdn15 tag=115 en=0
+ipc init ch=1
+ipc ch[1]:LTE-SDU, irb: va=d3dc0000-d3dde000 pa=d3dc0000-d3dde000
+ipc ch[1]:LTE-SDU, irb_work: va=d3db0000-d3dbc020 pa=d3db0000-d3dbc020
+  irb nr: tx=4096(2080bytes) rx=2048(2080bytes)
+   irb tx: va=d3dc0000-d3dd4000 pa=d3dc0000-d3dd4000
+   irb rx: va=d3dd4008-d3dde008 pa=d3dd4008-d3dde008
+eK: ipc ini t  mc-hc=h1_
+-nabled=0xT1K0:0 1 0 0p0e3er
+ genirq=fc002c28(1)
+c2: no platform data or transceiver defined
+platform dwc2: Driver dwc2 requests probe deferral
+netif set local ip=169.254.0.1 mask=255.255.0.0
+netif set local ip=0.0.0.0 mask=0.0.0.0
+netif set local ip=169.254.0.1 mask=255.255.255.252
+device eth0 entered promiscuous mode
+tc->desc=d58ac000 desc_phys=d3768000
+lpa=c5e1 expansion=6f
+expansion_nway(200, 3800, 200)
+eth0: link up, 1000Mbps, full-duplex (3140, 79ad, c5e1)
+brctl: iface usb0: No such device
+ifconfig: SIOCSIFADDR: No such device
+ced[1091]: [CED]queue.c:ce_queue_enqueue:37 event initialization start
+[set_mac] ip -6 addr add dev br0 scope link fe80::020A:3Bff:feF0:0130/64
+web_mode writemode==>BOLT_RGMII
+Set CACHE ENABLE_TR069==>1
+Set CACHE ENABLE_MBSSID==>0
+Set CACHE ENABLE_SNMP==>0
+Set CACHE ENABLE_WPS_PBC==>0
+Set CACHE ENABLE_WIFI_REMOVE_PW==>1
+Set CACHE ENABLE_MBSSID_MAC_FILTER==>0
+Set RSA_KEY_REFRESH_ENABLE==>0
+LTEIF:  lte0pdn0
+WANINTF:
+IPTABLES:  /bin/iptables
+WANINTF:  lte0pdn0
+/etc/sysconfig/script/nat_conf.sh [start|stop|restart]
+nf_conntrack version 0.5.0 (1182 buckets, 4728 max)
+eth phy reset done!
+MII_LCR: 00006e51->00006e51
+eth phy init LED done!
+Setting dhcp configuration..
+Internet Systems Consortium DHCP Server 4.1-ESV-R9
+Copyright 2004-2014 Internet Systems Consortium.
+All rights reserved.
+For info, please visit https://www.isc.org/software/dhcp/
+Can't open /var/tmp/dhcpd.conf: No such file or directory
+
+If you did not get this software from ftp.isc.org, please
+get the latest from ftp.isc.org and install that before
+requesting help.
+
+If you did get this software from ftp.isc.org and have not
+yet read the README, please read it before requesting help.
+If you intend to request help from the dhcp-bugs at isc.org
+mailing list, please read the section on the README about
+submitting bug reports and requests for help.
+
+Please do not under any circumstances send requests for
+help directly to the authors of this software - please
+send them to the appropriate mailing list as described in
+the README file.
+
+exiting.
+touch /var/run/dhcpd.pid
+ps | grep "dhcpd -cf" | awk '{print $1}' | head -n 1
+PID = 1214
+VLAN: all hmac cleared
+br0: port 1(eth0) entered forwarding state
+br0: port 1(eth0) entered forwarding state
+eth0: link down.
+VLAN: all hmac cleared
+br0: port 1(eth0) entered disabled state
+killall: lighttpd: no process killed
+[aes_get_givenIV] - read iv from file:negateiv_cert
+
+[aes_get_givenIV] - read iv from file:negateiv_cert
+
+[aes_get_givenIV] - read iv from file:negateiv_cert
+
+[cert_verify_callback] certificate is not yet valid
+[cert_validate_and_log] source cert file:sslpf, error code:9
+[aes_get_givenIV] - read iv from file:negateiv_dh
+
+1970-01-01 00:00:09: (network.c.288) warning: please use server.use-ipv6 only for hostnames, not without server.bind / empty address; your config will break if the kernel default for IPV6_V6ONLY changes
+1970-01-01 00:00:09: (network.c.288) warning: please use server.use-ipv6 only for hostnames, not without server.bind / empty address; your config will break if the kernel default for IPV6_V6ONLY changes
+running dhcp_relay.sh
+1970-01-01 00:00:09: (log.c.194) server started
+[bmon] Wait hibernation
+[dhcp relay] dhcp relay disabled
+[dhcp relay]stop dhcp_relay.sh ...
+killall: dhcprelay: no process killed
+test switch partition
+boot success
+run_telnetd:1
+enable tr069, then, disable RSA key refresh.
+RSA_KEY_REFRESH_ENABLE cache is 0, skip check key integrity
+RSA_KEY_REFRESH_ENABLE cache is 0, skip key refresh
+fault_ecc_nr=2
+/etc/sysconfig/board.conf: line 275: /bin/bcp: No such file or directory
+act=1
+#### VLAN ENABLE
+ENABLE WiMAX VLAN!!!
+VLAN LOG(00000004):
+vlan devices:
+   lte0pdn0: enable=0 tag=100
+   lte0pdn1: enable=0 tag=101
+   lte0pdn2: enable=0 tag=102
+   lte0pdn3: enable=0 tag=103
+   lte0pdn4: enable=0 tag=104
+   lte0pdn5: enable=0 tag=105
+   lte0pdn6: enable=0 tag=106
+   lte0pdn7: enable=0 tag=107
+   lte0pdn8: enable=0 tag=108
+   lte0pdn9: enable=0 tag=109
+  lte0pdn10: enable=0 tag=110
+  lte0pdn11: enable=0 tag=111
+  lte0pdn12: enable=0 tag=112
+  lte0pdn13: enable=0 tag=113
+  lte0pdn14: enable=0 tag=114
+  lte0pdn15: enable=0 tag=115
+      wimax: enable=1 tag=200
+running netif_q_thread!
+ENABLE lte0pdn0 VLAN!!!
+VLAN LOG(00000004):
+vlan devices:
+   lte0pdn0: enable=1 tag=100
+   lte0pdn1: enable=0 tag=101
+   lte0pdn2: enable=0 tag=102
+   lte0pdn3: enable=0 tag=103
+   lte0pdn4: enable=0 tag=104
+   lte0pdn5: enable=0 tag=105
+   lte0pdn6: enable=0 tag=106
+   lte0pdn7: enable=0 tag=107
+   lte0pdn8: enable=0 tag=108
+   lte0pdn9: enable=0 tag=109
+  lte0pdn10: enable=0 tag=110
+  lte0pdn11: enable=0 tag=111
+  lte0pdn12: enable=0 tag=112
+  lte0pdn13: enable=0 tag=113
+  lte0pdn14: enable=0 tag=114
+  lte0pdn15: enable=0 tag=115
+      wimax: enable=1 tag=200
+ENABLE lte0pdn1 VLAN!!!
+VLAN LOG(00000004):
+vlan devices:
+   lte0pdn0: enable=1 tag=100
+   lte0pdn1: enable=1 tag=101
+   lte0pdn2: enable=0 tag=102
+   lte0pdn3: enable=0 tag=103
+   lte0pdn4: enable=0 tag=104
+   lte0pdn5: enable=0 tag=105
+   lte0pdn6: enable=0 tag=106
+   lte0pdn7: enable=0 tag=107
+   lte0pdn8: enable=0 tag=108
+   lte0pdn9: enable=0 tag=109
+  lte0pdn10: enable=0 tag=110
+  lte0pdn11: enable=0 tag=111
+  lte0pdn12: enable=0 tag=112
+  lte0pdn13: enable=0 tag=113
+  lte0pdn14: enable=0 tag=114
+  lte0pdn15: enable=0 tag=115
+      wimax: enable=1 tag=200
+ENABLE lte0pdn2 VLAN!!!
+VLAN LOG(00000004):
+vlan devices:
+   lte0pdn0: enable=1 tag=100
+   lte0pdn1: enable=1 tag=101
+   lte0pdn2: enable=1 tag=102
+   lte0pdn3: enable=0 tag=103
+   lte0pdn4: enable=0 tag=104
+   lte0pdn5: enable=0 tag=105
+   lte0pdn6: enable=0 tag=106
+   lte0pdn7: enable=0 tag=107
+   lte0pdn8: enable=0 tag=108
+   lte0pdn9: enable=0 tag=109
+  lte0pdn10: enable=0 tag=110
+  lte0pdn11: enable=0 tag=111
+  lte0pdn12: enable=0 tag=112
+  lte0pdn13: enable=0 tag=113
+  lte0pdn14: enable=0 tag=114
+  lte0pdn15: enable=0 tag=115
+      wimax: enable=1 tag=200
+ENABLE lte0pdn3 VLAN!!!
+VLAN LOG(00000004):
+vlan devices:
+   lte0pdn0: enable=1 tag=100
+   lte0pdn1: enable=1 tag=101
+   lte0pdn2: enable=1 tag=102
+   lte0pdn3: enable=1 tag=103
+   lte0pdn4: enable=0 tag=104
+   lte0pdn5: enable=0 tag=105
+   lte0pdn6: enable=0 tag=106
+   lte0pdn7: enable=0 tag=107
+   lte0pdn8: enable=0 tag=108
+   lte0pdn9: enable=0 tag=109
+  lte0pdn10: enable=0 tag=110
+  lte0pdn11: enable=0 tag=111
+  lte0pdn12: enable=0 tag=112
+  lte0pdn13: enable=0 tag=113
+  lte0pdn14: enable=0 tag=114
+  lte0pdn15: enable=0 tag=115
+      wimax: enable=1 tag=200
+lpa=c5e1 expansion=6f
+expansion_nway(200, 3800, 200)
+eth0: link up, 1000Mbps, full-duplex (1040, 79ad, c5e1)
+VLAN: all hmac cleared
+br0: port 1(eth0) entered forwarding state
+br0: port 1(eth0) entered forwarding state
+lte_wan_vlan.sh
+show()
+arg_1: -I
+arg_2:
+arg_3:
+arg_4:
+def_ni:  lte0pdn3
+data_ni:
+voip_ni:
+mgmt_ni:
+bridge_ni:
+ni:
+set default vlan tag
+TAG=100
+100
+vlan devices:
+   lte0pdn0: enable=1 tag=100
+   lte0pdn1: enable=1 tag=101
+   lte0pdn2: enable=1 tag=102
+   lte0pdn3: enable=1 tag=103
+   lte0pdn4: enable=0 tag=104
+   lte0pdn5: enable=0 tag=105
+   lte0pdn6: enable=0 tag=106
+   lte0pdn7: enable=0 tag=107
+   lte0pdn8: enable=0 tag=108
+   lte0pdn9: enable=0 tag=109
+  lte0pdn10: enable=0 tag=110
+  lte0pdn11: enable=0 tag=111
+  lte0pdn12: enable=0 tag=112
+  lte0pdn13: enable=0 tag=113
+  lte0pdn14: enable=0 tag=114
+  lte0pdn15: enable=0 tag=115
+      wimax: enable=1 tag=200
+nvram_set cache lte0pdn0_vlan_tag 100
+[gps_conversion] else case for name:lte0pdn0_vlan_tag
+nvram_set success.
+TAG=101
+101
+vlan devices:
+   lte0pdn0: enable=1 tag=100
+   lte0pdn1: enable=1 tag=101
+   lte0pdn2: enable=1 tag=102
+   lte0pdn3: enable=1 tag=103
+   lte0pdn4: enable=0 tag=104
+   lte0pdn5: enable=0 tag=105
+   lte0pdn6: enable=0 tag=106
+   lte0pdn7: enable=0 tag=107
+   lte0pdn8: enable=0 tag=108
+   lte0pdn9: enable=0 tag=109
+  lte0pdn10: enable=0 tag=110
+  lte0pdn11: enable=0 tag=111
+  lte0pdn12: enable=0 tag=112
+  lte0pdn13: enable=0 tag=113
+  lte0pdn14: enable=0 tag=114
+  lte0pdn15: enable=0 tag=115
+      wimax: enable=1 tag=200
+nvram_set cache lte0pdn1_vlan_tag 101
+[gps_conversion] else case for name:lte0pdn1_vlan_tag
+nvram_set success.
+TAG=102
+102
+vlan devices:
+   lte0pdn0: enable=1 tag=100
+   lte0pdn1: enable=1 tag=101
+   lte0pdn2: enable=1 tag=102
+   lte0pdn3: enable=1 tag=103
+   lte0pdn4: enable=0 tag=104
+   lte0pdn5: enable=0 tag=105
+   lte0pdn6: enable=0 tag=106
+   lte0pdn7: enable=0 tag=107
+   lte0pdn8: enable=0 tag=108
+   lte0pdn9: enable=0 tag=109
+  lte0pdn10: enable=0 tag=110
+  lte0pdn11: enable=0 tag=111
+  lte0pdn12: enable=0 tag=112
+  lte0pdn13: enable=0 tag=113
+  lte0pdn14: enable=0 tag=114
+  lte0pdn15: enable=0 tag=115
+      wimax: enable=1 tag=200
+nvram_set cache lte0pdn2_vlan_tag 102
+[gps_conversion] else case for name:lte0pdn2_vlan_tag
+nvram_set success.
+TAG=103
+103
+vlan devices:
+   lte0pdn0: enable=1 tag=100
+   lte0pdn1: enable=1 tag=101
+   lte0pdn2: enable=1 tag=102
+   lte0pdn3: enable=1 tag=103
+   lte0pdn4: enable=0 tag=104
+   lte0pdn5: enable=0 tag=105
+   lte0pdn6: enable=0 tag=106
+   lte0pdn7: enable=0 tag=107
+   lte0pdn8: enable=0 tag=108
+   lte0pdn9: enable=0 tag=109
+  lte0pdn10: enable=0 tag=110
+  lte0pdn11: enable=0 tag=111
+  lte0pdn12: enable=0 tag=112
+  lte0pdn13: enable=0 tag=113
+  lte0pdn14: enable=0 tag=114
+  lte0pdn15: enable=0 tag=115
+      wimax: enable=1 tag=200
+nvram_set cache lte0pdn3_vlan_tag 103
+[gps_conversion] else case for name:lte0pdn3_vlan_tag
+nvram_set success.
+lte_init_script_path exists
+IPV6Q LOG(00000004):
+ipv6q_enabled=0
+NET EMUL LOG(00000000): NULL
+net_emul_mask=00000000
+em_mode=0x00000303:
+b[0]=REBOOT_ON_LINUX_CRASH(ON)
+b[1]=REBOOT_ON_APP_CRASH(ON)
+b[8]=REBOOT_ON_MODEM_CRASH(ON)
+b[9]=REBOOT_ON_MODEM_WDT(ON)
+b[10]=RELOAD_ON_MODEM_CRASH(off)
+b[11]=RELOAD_ON_MODEM_WDT(off)
+hw_wd_start(15000/20000)
+kmon_wd
+  [hw]
+    enabled=1
+    timeout=20000(ms)
+    chk_stat_enabled=1
+  [md]
+    enabled=0
+    duration=10000(ms)
+    timeout=3000(ms)
+  log_enabled=0
+bserver ver 0.1
+Bind Status = 0
+Sock port 60000
+lted: lted started
+[lted] bentry delayed copy: b336(4)
+[NV] NV_MAP  : GDM7243Q REV1
+[NV] NV_DATA : GDM7243Q REV1
+[NV] NV_REQ  : GDM7243Q REV2
+ind_watchdog_init()
+[NV_HCI] nv checksum is valid(0xd7ed5012/0xd7ed5012)
+[NV] GDM7243Q REV2 extend NV applied initial value
+[NVM] READ Head N_INFO         (7243,10,6e) - Status(0)
+[NVM] READ Head N_BCFG         (7243,10,06) - Status(0)
+[NVM] READ Head N_RFCAL        (7243,11,f8) - Status(0)
+[NVM] READ Head N_ETCAL        (7243,10,73) - Status(0)
+[NVM] READ Head N_TCCAL        (7243,10,9c) - Status(0)
+[NVM] READ Head N_NETWORK      (7243,10,8e) - Status(0)
+[NVM] READ Head N_SAFE         (7243,10,c1) - Status(0)
+[V_SIM]ProcNvBcfgData/gstVsimEnData:0
+default tdm log level=0 (NV:0)
+
+LTE DEVICE INSERT(DEV_IDX(1))
+
+CRASH LOG RESPOSNE(DEV_IDX(1))
+L1_BandInformation:success(38)
+L1_BandInformation:success(39)
+L1_BandInformation:success(40)
+L1_BandInformation:success(41)
+ ps_sys_init / UMM_Create
+[UMM_ERR] [V_SIM]eVSIM_Enabled:%d , 0
+[NAS_EMMCache] set IMEI to default value. current:[0x 08 3A 35...]
+[L1S] CMCC config
+USIM driver open
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 0
+
+lted: debug code 0
+
+lted: [SERVER] assigns client index 0
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successip_tables: (C) 2000-2006 Netfilter Core Team 2
+Type=Linux 2
+[bserver] ready to upgrade
+CM_LOG_LEVEL: 6
+cmcc_cm: CACHE_LIST->count=18
+cmcc_cm: CACHE_LIST->count=19
+cmcc_cm: CACHE_LIST->count=20
+cmcc_cm: Set dmz_stop to '1'
+cmcc_cm: CACHE_LIST->count=21
+cmcc_cm: CACHE_LIST->count=22
+cmcc_cm: CFUN     : 1
+cmcc_cm: AirPlane : 0
+cmcc_cm: Manual   : 0
+cmcc_cm: LTE Auto Connection Manager Start
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 1
+
+lted: debug code 1
+
+lted: [SERVER] assigns client index 1
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successcmcc_cm: Client ID: 4096
+lted: pm_no_sleepable=1
+[LTE_NV] LTE Network block write to CMN2 Network block (0x0000002c, 54)
+[NV] CMN2 NV Write Skip (5:LTE_NETWORK, 0x0000002c, 54)
+
+NAS EMM STATUS CHANGE INDICATION(DEV_IDX(1))
+Result : 0
+Main State : 1
+Deregistered Sub State : 5
+Registered Sub State : 0
+cmcc_cm: NAS EMM STATUS CHANGE INDICATION(DEV_IDX(1)), cfun_value:1
+cmcc_cm: Result : 0
+cmcc_cm: Main State : 1
+cmcc_cm: Deregistered Sub State : 5
+cmcc_cm: Registered Sub State : 0
+cmcc_cm: emm_status_dereg_emergency : 0
+lted: pm_no_sleepable=0
+
+UICC ACTIVATE INDICATION(DEV_IDX(1))
+Status : DEACTIVATE
+
+INITIALIZATION PROTOCOL STACK RESPONSE(DEV_IDX(1))
+Result : 0
+[HCI] bSupportEARFCN_EXT:0
+[LTE_NV] LTE NV Write Skip (0:LTE_INFO, 0x0000008d, 4)
+
+OPERATIONAL MODE(DEV_IDX(1))
+SELF CELL SEARCH : DISALBE
+SELF ATTACH : DISALBE
+OFFLINE INCLUDE  DEATCH : DISALBE
+
+IMS AND SMS INFO(DEV_IDX(1))
+SMS FORMAT : 3GPP
+SMS WRITE : NV
+IMS TEST MODE : OFF
+SMS OVER IP NET : OFF
+
+PLMN SEARCH INTERVAL(DEV_IDX(1))
+INTERVAL : 0, COUNT : 0
+INTERVAL : 0, COUNT : 0
+INTERVAL : 0, COUNT : 0
+INTERVAL : 0, COUNT : 0
+INTERVAL : 0, COUNT : 0
+INTERVAL : 0, COUNT : 0
+INTERVAL : 0, COUNT : 0
+INTERVAL : 0, COUNT : 0
+INTERVAL : 0, COUNT : 0
+INTERVAL : 0, COUNT : 0
+
+CURRENT OPERATOR(DEV_IDX(1)) :
+setUcfgExtendEarfcnType() result is 1
+set Earfcn type is 2 Bytes
+
+ONLINE RESPONSE(DEV_IDX(1))
+Result : 0
+[online_request]Watchdog First start
+lted: lte_watchdog_is_enable [0]
+
+GET PROTOCOL INFO ERROR RESULT : 1 (TYPE 6/DEV1)
+SMSMGR : bSmsFormat(3GPP)
+cmcc_cm: Watchdog is started
+
+IMEI INFO(DEV_IDX(1))
+1st digit : 3
+2st digit : 5
+3st digit : 3
+4st digit : 8
+5st digit : 1
+6st digit : 8
+7st digit : 0
+8st digit : 9
+9st digit : 0
+10st digit : 0
+11st digit : 3
+12st digit : 0
+13st digit : 7
+14st digit : 7
+Check digit : 4
+
+IMEI =353818090030774
+cmcc_cm: CACHE_LIST->count=23
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 2
+
+lted: debug code 2
+
+lted: [SERVER] assigns client index 2
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex success[TRAFFIC] NONE
+[TRAFFIC] NONE
+[TRAFFIC] NONE
+[TRAFFIC] NONE
+[TRAFFIC] NONE
+start_bpsl.sh
+
+
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 3
+
+lted: debug code 3
+
+lted: [SERVER] assigns client index 3
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successuicc_get_status() => 0
+cmcc_uicc: CMCC_UICC GET EVENT[E_INIT]
+cmcc_uicc: Watchdog is started
+[PIN_NOT_READY]
+cmcc_cm: PIN Status is received
+device eth_om entered promiscuous mode
+br0: port 2(eth_om) entered forwarding state
+br0: port 2(eth_om) entered forwarding state
+set comm_log_level:1
+[00:00:18.714315][COMMLUDP]: ludp comm_udp_clientsock:15
+set comm_log_level:1
+[00:00:18.718435][COMMLUDP]: listen socket creat success!comm_udp_listensock:[4]
+[00:00:18.718923][COMMLTCP]: listen socket creat success!comm_tcp_listensock:[4]
+cmcc_uicc: CMCC_UICC GET EVENT[E_UPDATE_SIM_STATUS_REQ]
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 4
+
+lted: debug code 4
+
+lted: [SERVER] assigns client index 4
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex success
+UICC MSG FROM DEVICE(DEV_IDX(1))
+UICC Status : 0
+UICC App Type : 1
+cmcc_uicc: _gct_uicc_req_ind() USIM_STATUS_NULL
+UICC ABSENT
+cmcc_uicc: LTED_GetUiccStatus() = 1
+cmcc_uicc: NO SIM CARD
+
+MSISDN READ RESULT(DEV_IDX(1))
+RESULT : 1
+MSISDN Number : 0
+cmcc_uicc: uicc_get_pin_status:0
+lted: [CLIENT 4] request disconnection
+cmcc_cm: CACHE_LIST->count=30
+cmcc_cm: CACHE_LIST->count=31
+cmcc_cm: CACHE_LIST->count=32
+cmcc_cm: CACHE_LIST->count=33
+cmcc_cm: CACHE_LIST->count=34
+cmcc_cm: CACHE_LIST->count=35
+cmcc_cm: CACHE_LIST->count=36
+cmcc_cm: CACHE_LIST->count=37
+cmcc_cm: CACHE_LIST->count=38
+cmcc_cm: CACHE_LIST->count=39
+cmcc_cm: CACHE_LIST->count=40
+cmcc_cm: CACHE_LIST->count=41
+cmcc_cm: CACHE_LIST->count=42
+cmcc_cm: CACHE_LIST->count=43
+cmcc_cm: CACHE_LIST->count=44
+cmcc_cm: CACHE_LIST->count=45
+cmcc_cm: CACHE_LIST->count=46
+cmcc_cm: CACHE_LIST->count=47
+cmcc_cm: CACHE_LIST->count=48
+cmcc_cm: CACHE_LIST->count=49
+cmcc_cm: CACHE_LIST->count=50
+cmcc_cm: CACHE_LIST->count=51
+
+DM LOG RESPONSE FAILED(DEV_IDX(1), DM_LOG_ID(18)
+  result=1
+cmcc_cm: CACHE_LIST->count=52
+cmcc_cm: CACHE_LIST->count=53
+cmcc_cm: CACHE_LIST->count=54
+cmcc_cm: fw_ver: 0.3.2.14
+cmcc_cm: chip_ver: 0.0
+cmcc_cm: CACHE_LIST->count=55
+cmcc_cm: CACHE_LIST->count=56
+cmcc_cm: scan_mode="1"
+cmcc_cm: BPSL_CMD=""
+cmcc_cm: Command: "ucfg set plmn search_list 1/3/3/1/40"
+cmcc_cm: CACHE_LIST->count=57
+cmcc_cm: CACHE_LIST->count=58
+cmcc_cm: CACHE_LIST->count=59
+cmcc_cm: CACHE_LIST->count=60
+cmcc_cm: CACHE_LIST->count=61
+cmcc_cm: CACHE_LIST->count=62
+cmcc_cm: CACHE_LIST->count=63
+cmcc_cm: CACHE_LIST->count=64
+cmcc_cm: CACHE_LIST->count=65
+cmcc_cm: CACHE_LIST->count=66
+cmcc_cm: CACHE_LIST->count=67
+cmcc_cm: CACHE_LIST->count=68
+cmcc_cm: CACHE_LIST->count=69
+cmcc_cm: CACHE_LIST->count=70
+cmcc_cm: CACHE_LIST->count=71
+cmcc_cm: CACHE_LIST->count=72
+cmcc_cm: CACHE_LIST->count=73
+cmcc_cm: CACHE_LIST->count=74
+cmcc_cm: CACHE_LIST->count=75
+cmcc_cm: DM log rsp fail!
+[NV] CMN NV Write Skip (28:NVIM_I_CMN_PLMN_CFG, 0x00000000, 1297)
+OK
+cmcc_cm: RECV_EVT: lte_state[S_INIT], event[E_PIN_NOT_READY]
+cmcc_cm: g_use_manual_connection=0 g_roaming_enabled=1
+cmcc_cm: 1. plmn_search_mode=
+cmcc_cm: 2. plmn_search_mode=2
+cmcc_cm: [E_PIN_NOT_READY]
+cmcc_cm: Invalid USIM, all operation stopped
+net.ipv4.tcp_keepalive_time = 3600
+/etc/sysctl.conf: line 4: fs.mqueue.msg_default=30: command not found
+/etc/sysctl.conf: line 5: fs.mqueue.msg_max=30: command not found
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 4
+
+lted: debug code 4
+
+lted: [SERVER] assigns client index 4
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successkillall: attest: no process killed
+set lcm_log_level:1
+[00:00:23.801502][LCM]: init connect status data:1 (1)
+[00:00:23.804340][LCM]: init connect status voip:1 (1)
+[00:00:23.804523][LCM]: init connect status all :1 (1)
+atcm: [LIB:tty_io] write failure: Bad file descriptor(9)
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^CURC
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^CURC=0
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^CURC=0' > /tmp/cmd.log
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: +COPS
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT+COPS=0
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT+COPS=0' > /tmp/cmd.log
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^CGCATT
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^CGCATT=0,1
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^CGCATT=0,1' > /dev/null &
+
+OK
+[00:00:24.052504][LCM]: init connect status data:1 (1)
+[00:00:24.052718][LCM]: init connect status voip:1 (1)
+[00:00:24.052932][LCM]: init connect status all :1 (1)
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^SYSINFOEX
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^SYSINFOEX
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+[00:00:24.061904][LCM]: detach rsp is too late.Attach/DeAttach is Idle.
+[00:00:24.062575][LCM]: detach rsp is too late.Manual Attach is Idle.
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [SERVER] assigns client index 5
+lted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^SYSINFOEX' > /tmp/cmd.log
+
+^SYSINFOEX:0,0,1,255,0,0,"NO SERVICE",0,"NO SERVICE",2
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: +CFUN
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT+CFUN=0
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT+CFUN=0' > /dev/null &
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: +CFUN
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT+CFUN=1
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT+CFUN=1' > /dev/null &
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^CURC
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^CURC=2,0001000000000000
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^CURC=2,0001000000000000' > /tmp/cmd.log
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^SIMLOCK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^SIMLOCK?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^SIMLOCK?' > /tmp/cmd.log
+
+^SIMLOCK:0
+OK
+[00:00:24.474860][LCM]: start modem init.
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: +CLCK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT+CLCK="SC",2
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT+CLCK="SC",2' > /tmp/cmd.log
+
++CME ERROR:10
+[00:00:24.529058][LCM]: get pin Enable error.
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^SYSCFGEX
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^SYSCFGEX="03",40000000,0,1,60000000000,0,0
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^SYSCFGEX="03",40000000,0,1,60000000000,0,0' > /tmp/cmd.log
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^CPIN
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^CPIN?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+
+DM LOG RESPONSE FAILED(DEV_IDX(1), DM_LOG_ID(18)
+  result=1
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^CPIN?' > /tmp/cmd.log
+
++CME ERROR:13
+cmcc_cm: DM log rsp fail!
+[00:00:24.648013][LCM]: get pinStatus  error.
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^SYSINFOEX
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^SYSINFOEX
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^SYSINFOEX' > /tmp/cmd.log
+
+^SYSINFOEX:0,0,1,255,0,0,"NO SERVICE",0,"NO SERVICE",2
+
+OK
+[00:00:24.705171][LCM]: lcm_simLedCtrl:state 0 .
+[00:00:24.706941][LCM]: init connect status data:1 (1)
+[00:00:24.707125][LCM]: init connect status voip:1 (1)
+[00:00:24.707277][LCM]: init connect status all :1 (1)
+[00:00:24.708071][LCM]: [attachmode]operate:[1],emm:[0],old:[0],attachmode:[0],searchmode:[2].
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^VERSION
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^VERSION?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^VERSION?' > /tmp/cmd.log
+
+^VERSION:BDT:Aug  9 2018, 15:18:24
+
+^VERSION:EXTS:0.3.2.14
+
+^VERSION:INTS:
+
+^VERSION:EXTD:M010
+
+^VERSION:INTD:
+
+^VERSION:EXTH:0.0
+
+^VERSION:INTH:
+
+^VERSION:EXTU:BOLT_RGMII
+
+^VERSION:INTU:
+
+^VERSION:CFG:1005
+
+^VERSION:PRL:
+
+^VERSION:OEM:
+
+^VERSION:INI:
+
+OK
+ioctl[TIOCSCTTY] failed
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex success
+0xfc000860: 0x3c3c2c0c
+
+DM> lted: [CLIENT 5] request disconnection
+
+353818090030774
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: +CRSM
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT+CRSM=176,28589,0,0,4
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex success
+ERROR
+lted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT+CRSM=176,28589,0,0,4' > /tmp/cmd.log
+[00:00:25.388954][LCM]: get crsm result error.
+[00:00:28.817890][LCM]: sysinfo timeout.
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^SYSINFOEX
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^SYSINFOEX
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^SYSINFOEX' > /tmp/cmd.log
+
+^SYSINFOEX:0,0,1,255,0,0,"NO SERVICE",0,"NO SERVICE",2
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^APTHROUGHPUT
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^APTHROUGHPUT?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+[00:00:28.880938][LCM]: lcm_simLedCtrl:state 0 .
+[00:00:28.881335][LCM]: init connect status data:1 (1)
+[00:00:28.881518][LCM]: init connect status voip:1 (1)
+[00:00:28.881670][LCM]: init connect status all :1 (1)
+[00:00:28.887957][LCM]: [attachmode]operate:[0],emm:[0],old:[0],attachmode:[0],searchmode:[2].
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^APTHROUGHPUT?' > /tmp/cmd.log
+
+^APTHROUGHPUT:0,0
+
+OK
+
+DM LOG RESPONSE FAILED(DEV_IDX(1), DM_LOG_ID(18)
+  result=1
+cmcc_cm: DM log rsp fail!
+[00:00:33.817920][LCM]: sysinfo timeout.
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^SYSINFOEX
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^SYSINFOEX
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^SYSINFOEX' > /tmp/cmd.log
+
+^SYSINFOEX:0,0,1,255,0,0,"NO SERVICE",0,"NO SERVICE",2
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^APTHROUGHPUT
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^APTHROUGHPUT?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+[00:00:33.883959][LCM]: lcm_simLedCtrl:state 0 .
+[00:00:33.884356][LCM]: init connect status data:1 (1)
+[00:00:33.884539][LCM]: init connect status voip:1 (1)
+[00:00:33.884691][LCM]: init connect status all :1 (1)
+[00:00:33.886919][LCM]: [attachmode]operate:[0],emm:[0],old:[0],attachmode:[0],searchmode:[2].
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^APTHROUGHPUT?' > /tmp/cmd.log
+
+^APTHROUGHPUT:0,0
+
+OK
+cmcc_uicc: CMCC_UICC GET EVENT[E_UPDATE_SIM_STATUS_REQ]
+
+DM LOG RESPONSE FAILED(DEV_IDX(1), DM_LOG_ID(18)
+  result=1
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successcmcc_cm: DM log rsp fail!
+
+UICC MSG FROM DEVICE(DEV_IDX(1))
+UICC Status : 0
+UICC App Type : 1
+cmcc_uicc: _gct_uicc_req_ind() USIM_STATUS_NULL
+UICC ABSENT
+cmcc_uicc: LTED_GetUiccStatus() = 1
+lted: [CLIENT 5] request disconnection
+cmcc_uicc: NO SIM CARD
+
+MSISDN READ RESULT(DEV_IDX(1))
+RESULT : 1
+MSISDN Number : 0
+cmcc_uicc: uicc_get_pin_status:0
+[00:00:35.817829][LCM]: Protect Attach Status Timer Out.
+[00:00:35.818073][LCM]: [attachmode]operateFlg:[0] attachStatusFlg:[0] mode:[0] manual:[0].
+[00:00:38.817890][LCM]: sysinfo timeout.
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^SYSINFOEX
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^SYSINFOEX
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^SYSINFOEX' > /tmp/cmd.log
+
+^SYSINFOEX:0,0,1,255,0,0,"NO SERVICE",0,"NO SERVICE",2
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^CERSSI
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^CERSSI?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+[00:00:38.884966][LCM]: lcm_simLedCtrl:state 0 .
+[00:00:38.885363][LCM]: init connect status data:1 (1)
+[00:00:38.885546][LCM]: init connect status voip:1 (1)
+[00:00:38.885698][LCM]: init connect status all :1 (1)
+[00:00:38.887926][LCM]: [attachmode]operate:[0],emm:[0],old:[0],attachmode:[0],searchmode:[2].
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^CERSSI?' > /tmp/cmd.log
+
+^CERSSI:0,0,99,0,255,99,99,99,15,0,0,99
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^SCCINFO
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^SCCINFO?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^SCCINFO?' > /tmp/cmd.log
+
+^SCCINFO:0,99,99,99,99,99,99,99
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^APTHROUGHPUT
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^APTHROUGHPUT?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^APTHROUGHPUT?' > /tmp/cmd.log
+
+^APTHROUGHPUT:0,0
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: +CSQ
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT+CSQ
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT+CSQ' > /tmp/cmd.log
+
++CSQ: 99,99
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^MIMOINFO
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^MIMOINFO?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^MIMOINFO?' > /tmp/cmd.log
+
+^MIMOINFO:0,0
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: +ECID
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT+ECID=0
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT+ECID=0' > /tmp/cmd.log
+
++ECID=0,NONE:
+
+OK
+
+DM LOG RESPONSE FAILED(DEV_IDX(1), DM_LOG_ID(18)
+  result=1
+cmcc_cm: DM log rsp fail!
+[00:00:43.817951][LCM]: sysinfo timeout.
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^SYSINFOEX
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^SYSINFOEX
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^SYSINFOEX' > /tmp/cmd.log
+
+^SYSINFOEX:0,0,1,255,0,0,"NO SERVICE",0,"NO SERVICE",2
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^CECELLID
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^CECELLID?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+[00:00:43.884020][LCM]: lcm_simLedCtrl:state 0 .
+[00:00:43.884386][LCM]: init connect status data:1 (1)
+[00:00:43.884569][LCM]: init connect status voip:1 (1)
+[00:00:43.884722][LCM]: init connect status all :1 (1)
+[00:00:43.886950][LCM]: [attachmode]operate:[0],emm:[0],old:[0],attachmode:[0],searchmode:[2].
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^CECELLID?' > /tmp/cmd.log
+
+^CECELLID:000000,0,0,0
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^APTHROUGHPUT
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^APTHROUGHPUT?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^APTHROUGHPUT?' > /tmp/cmd.log
+
+^APTHROUGHPUT:0,0
+
+OK
+cmcc_cm: Handshake Lost (1/10)
+/bin/sh: send_log: command not found
+
+DM LOG RESPONSE FAILED(DEV_IDX(1), DM_LOG_ID(18)
+  result=1
+cmcc_cm: DM log rsp fail!
+[00:00:47.817859][LCM]: Protect Attach Status Timer Out.
+[00:00:47.818103][LCM]: [attachmode]operateFlg:[0] attachStatusFlg:[0] mode:[0] manual:[0].
+[00:00:48.817951][LCM]: sysinfo timeout.
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^SYSINFOEX
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^SYSINFOEX
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^SYSINFOEX' > /tmp/cmd.log
+
+^SYSINFOEX:0,0,1,255,0,0,"NO SERVICE",0,"NO SERVICE",2
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^APTHROUGHPUT
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^APTHROUGHPUT?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+[00:00:48.884020][LCM]: lcm_simLedCtrl:state 0 .
+[00:00:48.884417][LCM]: init connect status data:1 (1)
+[00:00:48.884569][LCM]: init connect status voip:1 (1)
+[00:00:48.884722][LCM]: init connect status all :1 (1)
+[00:00:48.886950][LCM]: [attachmode]operate:[0],emm:[0],old:[0],attachmode:[0],searchmode:[2].
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^APTHROUGHPUT?' > /tmp/cmd.log
+
+^APTHROUGHPUT:0,0
+
+OK
+
+DM LOG RESPONSE FAILED(DEV_IDX(1), DM_LOG_ID(18)
+  result=1
+cmcc_cm: DM log rsp fail!
+cmcc_uicc: CMCC_UICC GET EVENT[E_UPDATE_SIM_STATUS_REQ]
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [SERVER] assigns client index 5
+
+UICC MSG FROM DEVICE(DEV_IDX(1))
+UICC Status : 0
+UICC App Type : 1
+cmcc_uicc: _gct_uicc_req_ind() USIM_STATUS_NULL
+UICC ABSENT
+cmcc_uicc: LTED_GetUiccStatus() = 1
+cmcc_uicc: NO SIM CARD
+lted: [CLIENT 5] request disconnection
+
+MSISDN READ RESULT(DEV_IDX(1))
+RESULT : 1
+MSISDN Number : 0
+cmcc_uicc: uicc_get_pin_status:0
+[00:00:53.817981][LCM]: sysinfo timeout.
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^SYSINFOEX
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^SYSINFOEX
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^SYSINFOEX' > /tmp/cmd.log
+
+^SYSINFOEX:0,0,1,255,0,0,"NO SERVICE",0,"NO SERVICE",2
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^CERSSI
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^CERSSI?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+[00:00:53.883013][LCM]: lcm_simLedCtrl:state 0 .
+[00:00:53.883379][LCM]: init connect status data:1 (1)
+[00:00:53.883562][LCM]: init connect status voip:1 (1)
+[00:00:53.883715][LCM]: init connect status all :1 (1)
+[00:00:53.886004][LCM]: [attachmode]operate:[0],emm:[0],old:[0],attachmode:[0],searchmode:[2].
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^CERSSI?' > /tmp/cmd.log
+
+^CERSSI:0,0,99,0,255,99,99,99,15,0,0,99
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^SCCINFO
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^SCCINFO?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^SCCINFO?' > /tmp/cmd.log
+
+^SCCINFO:0,99,99,99,99,99,99,99
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^APTHROUGHPUT
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^APTHROUGHPUT?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^APTHROUGHPUT?' > /tmp/cmd.log
+
+^APTHROUGHPUT:0,0
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: +CSQ
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT+CSQ
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT+CSQ' > /tmp/cmd.log
+
++CSQ: 99,99
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^MIMOINFO
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^MIMOINFO?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^MIMOINFO?' > /tmp/cmd.log
+
+^MIMOINFO:0,0
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: +ECID
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT+ECID=0
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT+ECID=0' > /tmp/cmd.log
+
++ECID=0,NONE:
+
+OK
+
+DM LOG RESPONSE FAILED(DEV_IDX(1), DM_LOG_ID(18)
+  result=1
+cmcc_cm: DM log rsp fail!
+[00:00:58.817981][LCM]: sysinfo timeout.
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^SYSINFOEX
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^SYSINFOEX
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^SYSINFOEX' > /tmp/cmd.log
+
+^SYSINFOEX:0,0,1,255,0,0,"NO SERVICE",0,"NO SERVICE",2
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^APTHROUGHPUT
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^APTHROUGHPUT?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+[00:00:58.883044][LCM]: lcm_simLedCtrl:state 0 .
+[00:00:58.883440][LCM]: init connect status data:1 (1)
+[00:00:58.883623][LCM]: init connect status voip:1 (1)
+[00:00:58.883776][LCM]: init connect status all :1 (1)
+[00:00:58.886004][LCM]: [attachmode]operate:[0],emm:[0],old:[0],attachmode:[0],searchmode:[2].
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^APTHROUGHPUT?' > /tmp/cmd.log
+
+^APTHROUGHPUT:0,0
+
+OK
+
+DM LOG RESPONSE FAILED(DEV_IDX(1), DM_LOG_ID(18)
+  result=1
+cmcc_cm: DM log rsp fail!
+[00:00:59.817920][LCM]: Protect Attach Status Timer Out.
+[00:00:59.818164][LCM]: [attachmode]operateFlg:[0] attachStatusFlg:[0] mode:[0] manual:[0].
+[00:01:03.818012][LCM]: sysinfo timeout.
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^SYSINFOEX
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^SYSINFOEX
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^SYSINFOEX' > /tmp/cmd.log
+
+^SYSINFOEX:0,0,1,255,0,0,"NO SERVICE",0,"NO SERVICE",2
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^CECELLID
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^CECELLID?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+[00:01:03.885058][LCM]: lcm_simLedCtrl:state 0 .
+[00:01:03.885454][LCM]: init connect status data:1 (1)
+[00:01:03.885637][LCM]: init connect status voip:1 (1)
+[00:01:03.885790][LCM]: init connect status all :1 (1)
+[00:01:03.888018][LCM]: [attachmode]operate:[0],emm:[0],old:[0],attachmode:[0],searchmode:[2].
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^CECELLID?' > /tmp/cmd.log
+
+^CECELLID:000000,0,0,0
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^APTHROUGHPUT
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^APTHROUGHPUT?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [SERVER] assigns client index 5
+lted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^APTHROUGHPUT?' > /tmp/cmd.log
+
+^APTHROUGHPUT:0,0
+
+OK
+
+DM LOG RESPONSE FAILED(DEV_IDX(1), DM_LOG_ID(18)
+  result=1
+cmcc_cm: DM log rsp fail!
+cmcc_uicc: CMCC_UICC GET EVENT[E_UPDATE_SIM_STATUS_REQ]
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [SERVER] assigns client index 5
+
+UICC MSG FROM DEVICE(DEV_IDX(1))
+UICC Status : 0
+UICC App Type : 1
+cmcc_uicc: _gct_uicc_req_ind() USIM_STATUS_NULL
+UICC ABSENT
+cmcc_uicc: LTED_GetUiccStatus() = 1
+cmcc_uicc: NO SIM CARD
+lted: [CLIENT 5] request disconnection
+
+MSISDN READ RESULT(DEV_IDX(1))
+RESULT : 1
+MSISDN Number : 0
+cmcc_uicc: uicc_get_pin_status:0
+[00:01:08.817981][LCM]: sysinfo timeout.
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^SYSINFOEX
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^SYSINFOEX
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^SYSINFOEX' > /tmp/cmd.log
+
+^SYSINFOEX:0,0,1,255,0,0,"NO SERVICE",0,"NO SERVICE",2
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^CERSSI
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^CERSSI?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+[00:01:08.880083][LCM]: lcm_simLedCtrl:state 0 .
+[00:01:08.880480][LCM]: init connect status data:1 (1)
+[00:01:08.880633][LCM]: init connect status voip:1 (1)
+[00:01:08.880785][LCM]: init connect status all :1 (1)
+[00:01:08.885119][LCM]: [attachmode]operate:[0],emm:[0],old:[0],attachmode:[0],searchmode:[2].
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^CERSSI?' > /tmp/cmd.log
+
+^CERSSI:0,0,99,0,255,99,99,99,15,0,0,99
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^SCCINFO
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^SCCINFO?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^SCCINFO?' > /tmp/cmd.log
+
+^SCCINFO:0,99,99,99,99,99,99,99
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^APTHROUGHPUT
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^APTHROUGHPUT?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^APTHROUGHPUT?' > /tmp/cmd.log
+
+^APTHROUGHPUT:0,0
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: +CSQ
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT+CSQ
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT+CSQ' > /tmp/cmd.log
+
++CSQ: 99,99
+
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: ^MIMOINFO
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT^MIMOINFO?
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT^MIMOINFO?' > /tmp/cmd.log
+
+^MIMOINFO:0,0
+OK
+DBUG[gdm_client.c gdm_hook_mesg_handler:10452],data->refined.data: +ECID
+DBUG[gdm_client.c gdm_hook_mesg_handler:10453],data->cmd.data: AT+ECID=0
+DBUG[gdm_client.c prime_atc_gdm_get_syscmd:8531],Entry prime_atc_gdm_get_syscmd
+lted: [SERVER] new connection request
+lted: debug code lted_srv_alloc_client 5
+
+lted: debug code 5
+
+lted: [SERVER] assigns client index 5
+DBUG[lted_lib.c lted_client_init_ex:412],lted_client_init_ex successlted: [CLIENT 5] request disconnection
+DBUG[gdm_client.c prime_gdm_system_call:8467],buf: /usr/lte/dm_cli -pesi 'AT+ECID=0' > /tmp/cmd.log
+
++ECID=0,NONE:
+
+OK
+
+DM LOG RESPONSE FAILED(DEV_IDX(1), DM_LOG_ID(18)
+  result=1
+cmcc_cm: DM log rsp fail!
+
