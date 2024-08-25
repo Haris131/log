@@ -1,0 +1,565 @@
+[32m[    0.000000] [0mBooting Linux on physical CPU 0x0000000000 [0x410fd030]
+[32m[    0.000000] [0mLinux version 6.10.0 (runner@chewy) (aarch64-linux-gnu-gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0, GNU ld (GNU Binutils for Ubuntu) 2.34) #1 SMP PREEMPT Sat Aug 24 17:49:44 WIB 2024
+[32m[    0.000000] [0m[1mKASLR disabled due to lack of seed[0m
+[32m[    0.000000] [0m[33mMachine model[0m: uz801 v3.0 4G Modem Stick
+[32m[    0.000000] [0m[33mearlycon[0m: msm_serial_dm0 at MMIO 0x00000000078b0000 (options '')
+[32m[    0.000000] [0m[33mprintk[0m: legacy bootconsole [msm_serial_dm0] enabled
+[32m[    0.000000] [0m[33mOF[0m: reserved mem: 0x000000008bd00000..0x000000008c2fffff (6144 KiB) nomap non-reusable wcnss
+[32m[    0.000000] [0m[33mOF[0m: reserved mem: 0x000000008c300000..0x000000008c7fffff (5120 KiB) nomap non-reusable venus
+[32m[    0.000000] [0m[33mOF[0m: reserved mem: 0x000000008c800000..0x000000008c8fffff (1024 KiB) nomap non-reusable mba
+[32m[    0.000000] [0m[33mOF[0m: reserved mem: 0x0000000086000000..0x00000000862fffff (3072 KiB) nomap non-reusable tz-apps@86000000
+[32m[    0.000000] [0m[33mOF[0m: reserved mem: 0x0000000086300000..0x00000000863fffff (1024 KiB) nomap non-reusable smem@86300000
+[32m[    0.000000] [0m[33mOF[0m: reserved mem: 0x0000000086400000..0x00000000864fffff (1024 KiB) nomap non-reusable hypervisor@86400000
+[32m[    0.000000] [0m[33mOF[0m: reserved mem: 0x0000000086500000..0x000000008667ffff (1536 KiB) nomap non-reusable tz@86500000
+[32m[    0.000000] [0m[33mOF[0m: reserved mem: 0x0000000086680000..0x00000000866fffff (512 KiB) nomap non-reusable reserved@86680000
+[32m[    0.000000] [0m[33mOF[0m: reserved mem: 0x0000000086700000..0x00000000867dffff (896 KiB) nomap non-reusable rmtfs@86700000
+[32m[    0.000000] [0m[33mOF[0m: reserved mem: 0x00000000867e0000..0x00000000867fffff (128 KiB) nomap non-reusable rfsa@867e0000
+[32m[    0.000000] [0m[33mOF[0m: reserved mem: 0x0000000086800000..0x000000008bcfffff (87040 KiB) nomap non-reusable mpss@86800000
+[32m[    0.000000] [0mZone ranges:
+[32m[    0.000000] [0m  DMA      [mem 0x0000000080000000-0x000000009fffffff]
+[32m[    0.000000] [0m  DMA32    empty
+[32m[    0.000000] [0m  Normal   empty
+[32m[    0.000000] [0mMovable zone start for each node
+[32m[    0.000000] [0mEarly memory node ranges
+[32m[    0.000000] [0m[33m  node   0[0m: [mem 0x0000000080000000-0x0000000085ffffff]
+[32m[    0.000000] [0m[33m  node   0[0m: [mem 0x0000000086000000-0x000000008c8fffff]
+[32m[    0.000000] [0m[33m  node   0[0m: [mem 0x000000008c900000-0x000000009fffffff]
+[32m[    0.000000] [0mInitmem setup node 0 [mem 0x0000000080000000-0x000000009fffffff]
+[32m[    0.000000] [0m[33mcma[0m: Reserved 32 MiB at 0x000000009d600000 on node -1
+[32m[    0.000000] [0m[33mpsci[0m: probing for conduit method from DT.
+[32m[    0.000000] [0m[33mpsci[0m: PSCIv1.0 detected in firmware.
+[32m[    0.000000] [0m[33mpsci[0m: Using standard PSCI v0.2 function IDs
+[32m[    0.000000] [0m[33mpsci[0m: MIGRATE_INFO_TYPE not supported.
+[32m[    0.000000] [0m[33mpsci[0m: SMC Calling Convention v1.0
+[32m[    0.000000] [0m[33mpsci[0m: OSI mode supported.
+[32m[    0.000000] [0m[33mpsci[0m: [Firmware Bug]: failed to set PC mode: -3
+[32m[    0.000000] [0m[33mpercpu[0m: Embedded 23 pages/cpu s56616 r8192 d29400 u94208
+[32m[    0.000000] [0m[33mpcpu-alloc[0m: s56616 r8192 d29400 u94208 alloc=23*4096
+[32m[    0.000000] [0m[33mpcpu-alloc[0m: [0] 0 [0] 1 [0] 2 [0] 3 
+[32m[    0.000000] [0mDetected VIPT I-cache on CPU0
+[32m[    0.000000] [0m[33mCPU features[0m: detected: ARM erratum 843419
+[32m[    0.000000] [0m[33mCPU features[0m: detected: ARM erratum 845719
+[32m[    0.000000] [0m[33mCPU features[0m: detected: ARM errata 826319, 827319, 824069, or 819472
+[32m[    0.000000] [0m[33malternatives[0m: applying boot alternatives
+[32m[    0.000000] [0m[33mKernel command line[0m: earlycon console=tty0 console=ttyMSM0,115200 root=/dev/mmcblk0p14 rw rootwait androidboot.emmc=true androidboot.serialno=a16136f5 androidboot.baseband=msm mdss_mdp.panel=0:dsi:0:
+[32m[    0.000000] [0m[33mDentry cache hash table entries[0m: 65536 (order: 7, 524288 bytes, linear)
+[32m[    0.000000] [0m[33mInode-cache hash table entries[0m: 32768 (order: 6, 262144 bytes, linear)
+[32m[    0.000000] [0m[33mBuilt 1 zonelists, mobility grouping on.  Total pages[0m: 131072
+[32m[    0.000000] [0m[33mmem auto-init[0m: stack:off, heap alloc:off, heap free:off
+[32m[    0.000000] [0m[33msoftware IO TLB[0m: SWIOTLB bounce buffer size adjusted to 0MB
+[32m[    0.000000] [0m[33msoftware IO TLB[0m: area num 4.
+[32m[    0.000000] [0m[33msoftware IO TLB[0m: SWIOTLB bounce buffer size roundup to 1MB
+[32m[    0.000000] [0m[33msoftware IO TLB[0m: mapped [mem 0x000000009d480000-0x000000009d580000] (1MB)
+[32m[    0.000000] [0m[33mMemory[0m: 353868K/524288K available (10560K kernel code, 1226K rwdata, 3684K rodata, 2432K init, 430K bss, 137652K reserved, 32768K cma-reserved)
+[32m[    0.000000] [0m[33mSLUB[0m: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[32m[    0.000000] [0m[33mrcu[0m: Preemptible hierarchical RCU implementation.
+[32m[    0.000000] [0m[33mrcu[0m: 	RCU event tracing is enabled.
+[32m[    0.000000] [0m	Trampoline variant of Tasks RCU enabled.
+[32m[    0.000000] [0m	Tracing variant of Tasks RCU enabled.
+[32m[    0.000000] [0m[33mrcu[0m: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[32m[    0.000000] [0m[33mRCU Tasks[0m: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1.
+[32m[    0.000000] [0m[33mRCU Tasks Trace[0m: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1.
+[32m[    0.000000] [0m[33mNR_IRQS[0m: 64, nr_irqs: 64, preallocated irqs: 0
+[32m[    0.000000] [0m[33mRoot IRQ handler[0m: gic_handle_irq
+[32m[    0.000000] [0m[33mGIC[0m: Using split EOI/Deactivate mode
+[32m[    0.000000] [0m[33mrcu[0m: srcu_init: Setting srcu_struct sizes based on contention.
+[32m[    0.000000] [0m[33march_timer[0m: cp15 and mmio timer(s) running at 19.20MHz (phys/virt).
+[32m[    0.000000] [0m[33mclocksource[0m: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[32m[    0.000000] [0m[33msched_clock[0m: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[32m[    0.010976] [0m[33mConsole[0m: colour dummy device 80x25
+[32m[    0.018759] [0m[33mprintk[0m: legacy console [tty0] enabled
+[32m[    0.024123] [0mCalibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=76800)
+[32m[    0.028070] [0m[33mpid_max[0m: default: 32768 minimum: 301
+[32m[    0.038390] [0m[33mLSM[0m: initializing lsm=capability,apparmor,evm
+[32m[    0.043082] [0m[33mAppArmor[0m: AppArmor initialized
+[32m[    0.048378] [0m[33mMount-cache hash table entries[0m: 1024 (order: 1, 8192 bytes, linear)
+[32m[    0.052281] [0m[33mMountpoint-cache hash table entries[0m: 1024 (order: 1, 8192 bytes, linear)
+[32m[    0.062125] [0m[33mrcu[0m: Hierarchical SRCU implementation.
+[32m[    0.067491] [0m[33mrcu[0m: 	Max phase no-delay instances is 1000.
+[32m[    0.073474] [0m[33msmp[0m: Bringing up secondary CPUs ...
+[32m[    0.077993] [0mDetected VIPT I-cache on CPU1
+[32m[    0.078109] [0m[33mCPU1[0m: Booted secondary processor 0x0000000001 [0x410fd030]
+[32m[    0.078990] [0mDetected VIPT I-cache on CPU2
+[32m[    0.079092] [0m[33mCPU2[0m: Booted secondary processor 0x0000000002 [0x410fd030]
+[32m[    0.079929] [0mDetected VIPT I-cache on CPU3
+[32m[    0.080025] [0m[33mCPU3[0m: Booted secondary processor 0x0000000003 [0x410fd030]
+[32m[    0.080142] [0m[33msmp[0m: Brought up 1 node, 4 CPUs
+[32m[    0.113311] [0m[33mSMP[0m: Total of 4 processors activated.
+[32m[    0.117375] [0m[33mCPU[0m: All CPU(s) started at EL2
+[32m[    0.122192] [0m[33mCPU features[0m: detected: 32-bit EL0 Support
+[32m[    0.126143] [0m[33mCPU features[0m: detected: 32-bit EL1 Support
+[32m[    0.131281] [0m[33mCPU features[0m: detected: CRC32 instructions
+[32m[    0.136437] [0m[33malternatives[0m: applying system-wide alternatives
+[32m[    0.143199] [0m[33mdevtmpfs[0m: initialized
+[32m[    0.159199] [0m[33mclocksource[0m: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[32m[    0.159280] [0m[33mfutex hash table entries[0m: 1024 (order: 4, 65536 bytes, linear)
+[32m[    0.168905] [0m28128 pages in range for non-PLT usage
+[32m[    0.168923] [0m519648 pages in range for PLT usage
+[32m[    0.174938] [0m[33mpinctrl core[0m: initialized pinctrl subsystem
+[32m[    0.187952] [0m[33mNET[0m: Registered PF_NETLINK/PF_ROUTE protocol family
+[32m[    0.190473] [0m[33mDMA[0m: preallocated 128 KiB GFP_KERNEL pool for atomic allocations
+[32m[    0.195449] [0m[33mDMA[0m: preallocated 128 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[32m[    0.202739] [0m[33mDMA[0m: preallocated 128 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[32m[    0.210242] [0m[33maudit[0m: initializing netlink subsys (disabled)
+[32m[    0.217991] [0m[33maudit[0m: type=2000 audit(0.152:1): state=initialized audit_enabled=0 res=1
+[32m[    0.218478] [0m[33mthermal_sys[0m: Registered thermal governor 'step_wise'
+[32m[    0.223314] [0m[33mcpuidle[0m: using governor menu
+[32m[    0.237187] [0m[33mNET[0m: Registered PF_QIPCRTR protocol family
+[32m[    0.241246] [0m[33mhw-breakpoint[0m: found 6 breakpoint and 4 watchpoint registers.
+[32m[    0.246021] [0mASID allocator initialised with 65536 entries
+[32m[    0.255348] [0m[33mCPUidle PSCI[0m: Initialized CPU PM domain topology using OSI mode
+[32m[    0.273841] [0m[33mplatform 78d9000.usb[0m: Fixed dependency cycle(s) with /soc@0/usb@78d9000/ulpi/phy
+[32m[    0.276877] [0m[33mHugeTLB[0m: registered 1.00 GiB page size, pre-allocated 0 pages
+[32m[    0.281412] [0m[33mHugeTLB[0m: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[32m[    0.288081] [0m[33mHugeTLB[0m: registered 32.0 MiB page size, pre-allocated 0 pages
+[32m[    0.294148] [0m[33mHugeTLB[0m: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[32m[    0.301091] [0m[33mHugeTLB[0m: registered 2.00 MiB page size, pre-allocated 0 pages
+[32m[    0.307165] [0m[33mHugeTLB[0m: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[32m[    0.314112] [0m[33mHugeTLB[0m: registered 64.0 KiB page size, pre-allocated 0 pages
+[32m[    0.320186] [0m[33mHugeTLB[0m: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[32m[    0.327974] [0m[33mcryptd[0m: max_cpu_qlen set to 1000
+[32m[    0.334273] [0m[33miommu[0m: Default domain type: Translated
+[32m[    0.337734] [0m[33miommu[0m: DMA domain TLB invalidation policy: strict mode
+[32m[    0.342749] [0mSCSI subsystem initialized
+[32m[    0.348643] [0m[33musbcore[0m: registered new interface driver usbfs
+[32m[    0.352248] [0m[33musbcore[0m: registered new interface driver hub
+[32m[    0.357725] [0m[33musbcore[0m: registered new device driver usb
+[32m[    0.363359] [0m[33mpps_core[0m: LinuxPPS API ver. 1 registered
+[32m[    0.368103] [0m[33mpps_core[0m: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[32m[    0.373162] [0mPTP clock support registered
+[32m[    0.383428] [0m[33mqcom_scm[0m: convention: smc arm 32
+[32m[    0.386764] [0mAdvanced Linux Sound Architecture Driver Initialized.
+[32m[    0.391794] [0m[33mclocksource[0m: Switched to clocksource arch_sys_counter
+[32m[    0.396706] [0m[33mVFS[0m: Disk quotas dquot_6.6.0
+[32m[    0.402503] [0m[33mVFS[0m: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[32m[    0.407151] [0m[33mAppArmor[0m: AppArmor Filesystem Enabled
+[32m[    0.423068] [0m[33mNET[0m: Registered PF_INET protocol family
+[32m[    0.423277] [0m[33mIP idents hash table entries[0m: 8192 (order: 4, 65536 bytes, linear)
+[32m[    0.427860] [0m[33mtcp_listen_portaddr_hash hash table entries[0m: 256 (order: 0, 4096 bytes, linear)
+[32m[    0.434144] [0m[33mTable-perturb hash table entries[0m: 65536 (order: 6, 262144 bytes, linear)
+[32m[    0.442338] [0m[33mTCP established hash table entries[0m: 4096 (order: 3, 32768 bytes, linear)
+[32m[    0.450351] [0m[33mTCP bind hash table entries[0m: 4096 (order: 5, 131072 bytes, linear)
+[32m[    0.458177] [0m[33mTCP[0m: Hash tables configured (established 4096 bind 4096)
+[32m[    0.465158] [0m[33mUDP hash table entries[0m: 256 (order: 1, 8192 bytes, linear)
+[32m[    0.471591] [0m[33mUDP-Lite hash table entries[0m: 256 (order: 1, 8192 bytes, linear)
+[32m[    0.478035] [0m[33mNET[0m: Registered PF_UNIX/PF_LOCAL protocol family
+[32m[    0.489367] [0m[33mkvm [1][0m: nv: 477 coarse grained trap handlers
+[32m[    0.491140] [0m[33mkvm [1][0m: IPA Size Limit: 40 bits
+[32m[    0.497292] [0m[33mkvm [1][0m: vgic interrupt IRQ9
+[32m[    0.500339] [0m[33mkvm [1][0m: Hyp nVHE mode initialized successfully
+[32m[    0.505721] [0mInitialise system trusted keyrings
+[32m[    0.509740] [0m[33mworkingset[0m: timestamp_bits=46 max_order=17 bucket_order=0
+[32m[    0.579881] [0mKey type asymmetric registered
+[32m[    0.579921] [0mAsymmetric key parser 'x509' registered
+[32m[    0.582930] [0mBlock layer SCSI generic (bsg) driver version 0.4 loaded (major 248)
+[32m[    0.587875] [0mio scheduler mq-deadline registered
+[32m[    0.595309] [0mio scheduler kyber registered
+[32m[    0.610528] [0m[33mmsm_serial 78b0000.serial[0m: msm_serial: detected port #0
+[32m[    0.610659] [0m[33mmsm_serial 78b0000.serial[0m: uartclk = 7372800
+[32m[    0.615987] [0m[33m78b0000.serial[0m: ttyMSM0 at MMIO 0x78b0000 (irq = 21, base_baud = 460800) is a MSM
+[32m[    0.621255] [0m[33mmsm_serial[0m: console setup on port #0
+[32m[    0.621369] [0m[33mprintk[0m: legacy console [ttyMSM0] enabled
+[32m[    0.629959] [0m[33mprintk[0m: legacy bootconsole [msm_serial_dm0] disabled
+[32m[    0.644280] [0m[33mmsm_serial[0m: driver initialized
+[32m[    0.647196] [0m[33mqcom-iommu 1ef0000.iommu[0m: iommu sec: pgtable size: 94208
+[32m[    0.662963] [0m[33mloop[0m: module loaded
+[32m[    0.663453] [0m[33mspmi_pmic_arb 200f000.spmi[0m: PMIC arbiter version v2 (0x20010000)
+[32m[    0.669911] [0m[33musbcore[0m: registered new interface driver cdc_acm
+[32m[    0.672258] [0m[33mcdc_acm[0m: USB Abstract Control Model driver for USB modems and ISDN adapters
+[32m[    0.677925] [0m[33musbcore[0m: registered new interface driver usb-storage
+[32m[    0.687890] [0m[33mrtc-pm8xxx 200f000.spmi:pmic@0:rtc@6000[0m: registered as rtc0
+[32m[    0.691904] [0m[33mrtc-pm8xxx 200f000.spmi:pmic@0:rtc@6000[0m: setting system clock to 1970-01-01T00:38:15 UTC (2295)
+[32m[    0.698277] [0m[33mi2c_dev[0m: i2c /dev entries driver
+[32m[    0.710464] [0m[33mdevice-mapper[0m: ioctl: 4.48.0-ioctl (2023-03-01) initialised: dm-devel@lists.linux.dev
+[32m[    0.714186] [0m[33msdhci[0m: Secure Digital Host Controller Interface driver
+[32m[    0.721242] [0m[33msdhci[0m: Copyright(c) Pierre Ossman
+[32m[    0.727276] [0m[33msdhci-pltfm[0m: SDHCI platform and OF driver helper
+[32m[    0.733612] [0m[33mledtrig-cpu[0m: registered to indicate activity on CPUs
+[32m[    0.738025] [0m[33musbcore[0m: registered new interface driver usbhid
+[32m[    0.743474] [0m[33musbhid[0m: USB HID core driver
+[32m[    0.751050] [0m[33mhw perfevents[0m: enabled with armv8_cortex_a53 PMU driver, 7 counters available
+[32m[    0.754724] [0mInitializing XFRM netlink socket
+[32m[    0.760906] [0m[33mNET[0m: Registered PF_PACKET protocol family
+[32m[    0.765214] [0m[33mNET[0m: Registered PF_KEY protocol family
+[32m[    0.770196] [0mKey type dns_resolver registered
+[32m[    0.783228] [0m[33mTimer migration[0m: 1 hierarchy levels; 8 children per group; 1 crossnode level
+[32m[    0.783709] [0mregistered taskstats version 1
+[32m[    0.790641] [0mLoading compiled-in X.509 certificates
+[32m[    0.807666] [0mKey type encrypted registered
+[32m[    0.807726] [0m[33mAppArmor[0m: AppArmor sha256 policy hashing enabled
+[32m[    0.810730] [0m[33mevm[0m: Initialising EVM extended attributes:
+[32m[    0.816420] [0m[33mevm[0m: security.selinux (disabled)
+[32m[    0.821359] [0m[33mevm[0m: security.SMACK64 (disabled)
+[32m[    0.825786] [0m[33mevm[0m: security.SMACK64EXEC (disabled)
+[32m[    0.830038] [0m[33mevm[0m: security.SMACK64TRANSMUTE (disabled)
+[32m[    0.834640] [0m[33mevm[0m: security.SMACK64MMAP (disabled)
+[32m[    0.839586] [0m[33mevm[0m: security.apparmor
+[32m[    0.844271] [0m[33mevm[0m: security.ima (disabled)
+[32m[    0.847471] [0m[33mevm[0m: security.capability
+[32m[    0.851562] [0m[33mevm[0m: HMAC attrs: 0x1
+[32m[    0.887120] [0m[33ms3[0m: Bringing 0uV into 1250000-1250000uV
+[32m[    0.887709] [0m[33ms4[0m: Bringing 0uV into 1850000-1850000uV
+[32m[    0.891427] [0m[33ml2[0m: Bringing 0uV into 1200000-1200000uV
+[32m[    0.892059] [0m[33minput[0m: GPIO Buttons as /devices/platform/gpio-keys/input/input0
+[32m[    0.896244] [0m[33ml5[0m: Bringing 0uV into 1800000-1800000uV
+[32m[    0.900980] [0m[33mclk[0m: Disabling unused clocks
+[32m[    0.908008] [0m[33ml6[0m: Bringing 0uV into 1800000-1800000uV
+[32m[    0.912578] [0m[33mPM[0m: genpd: Disabling unused power domains
+[32m[    0.916856] [0m[33ml7[0m: Bringing 0uV into 1800000-1800000uV
+[32m[    0.927216] [0m[33ml8[0m: Bringing 0uV into 2900000-2900000uV
+[32m[    0.931322] [0m[33ml9[0m: Bringing 0uV into 3300000-3300000uV
+[32m[    0.936189] [0mALSA device list:
+[32m[    0.936386] [0m[33ml11[0m: Bringing 0uV into 2950000-2950000uV
+[32m[    0.940735] [0m  No soundcards found.
+[32m[    0.944111] [0m[33ml12[0m: Bringing 0uV into 1800000-1800000uV
+[32m[    0.952525] [0m[33ml13[0m: Bringing 0uV into 3075000-3075000uV
+[32m[    0.959264] [0mWaiting for root device /dev/mmcblk0p14...
+[32m[    0.992571] [0m[33mmmc0[0m: SDHCI controller on 7824900.mmc [7824900.mmc] using ADMA
+[32m[    1.115523] [0m[33mmmc0[0m: new DDR MMC card at address 0001
+[32m[    1.116466] [0m[33mmmcblk0[0m: mmc0:0001  XINYH 3.61 GiB
+[32m[    1.121992] [0m[33m mmcblk0[0m: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15
+[32m[    1.127548] [0m[33mmmcblk0boot0[0m: mmc0:0001  XINYH 2.00 MiB
+[32m[    1.131772] [0m[33mmmcblk0boot1[0m: mmc0:0001  XINYH 2.00 MiB
+[32m[    1.136497] [0m[33mmmcblk0rpmb[0m: mmc0:0001  XINYH 2.00 MiB, chardev (243:0)
+[32m[    1.157969] [0m[33mEXT4-fs (mmcblk0p14)[0m[1m: warning: mounting unchecked fs, running e2fsck is recommended[0m
+[32m[    1.188314] [0m[33mEXT4-fs (mmcblk0p14)[0m: mounted filesystem ff313567-e9f1-5a5d-9895-3ba130b4a864 r/w without journal. Quota mode: none.
+[32m[    1.188436] [0m[33mVFS[0m: Mounted root (ext4 filesystem) on device 179:14.
+[32m[    1.201068] [0m[33mdevtmpfs[0m: mounted
+[32m[    1.206007] [0m[33mFreeing unused kernel memory[0m: 2432K
+[32m[    1.208001] [0mRun /sbin/init as init process
+[32m[    1.212253] [0m  with arguments:
+[32m[    1.212261] [0m    /sbin/init
+[32m[    1.212268] [0m  with environment:
+[32m[    1.212274] [0m    HOME=/
+[32m[    1.212281] [0m    TERM=linux
+[32m[    1.259412] [0m[33minit[0m: Console is alive
+[32m[    1.259594] [0m[33minit[0m: - watchdog -
+[32m[    1.330661] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/apr.ko[0m
+[32m[    1.330792] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/arm_smccc_trng.ko[0m
+[32m[    1.335911] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/atmel_mxt_ts.ko[0m
+[32m[    1.361945] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/bsd_comp.ko[0m
+[32m[    1.362066] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/btbcm.ko[0m
+[32m[    1.367480] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/btintel.ko[0m
+[32m[    1.373632] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/btqca.ko[0m
+[32m[    1.380221] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/btqcomsmd.ko[0m
+[32m[    1.386289] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/btrtl.ko[0m
+[32m[    1.392889] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/btusb.ko[0m
+[32m[    1.403299] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/cdc-wdm.ko[0m
+[32m[    1.421122] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/cpufreq_conservative.ko[0m
+[32m[    1.421244] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/cpufreq_ondemand.ko[0m
+[32m[    1.427693] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/cpufreq_userspace.ko[0m
+[32m[    1.434885] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/crc-ccitt.ko[0m
+[32m[    1.449894] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/dm-bio-prison.ko[0m
+[32m[    1.450010] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/dm-bufio.ko[0m
+[32m[    1.455759] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/dm-crypt.ko[0m
+[32m[    1.462366] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/dm-persistent-data.ko[0m
+[32m[    1.468865] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/dm-thin-pool.ko[0m
+[32m[    1.476416] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/drm_shmem_helper.ko[0m
+[32m[    1.483092] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/dummy.ko[0m
+[32m[    1.497307] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/edt-ft5x06.ko[0m
+[32m[    1.497417] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/eeprom_93cx6.ko[0m
+[32m[    1.522996] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/fastrpc.ko[0m
+[32m[    1.533594] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/gud.ko[0m
+[32m[    1.538096] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/i2c-qcom-cci.ko[0m
+[32m[    1.622114] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ipvlan.ko[0m
+[32m[    1.622245] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/led-class-flash.ko[0m
+[32m[    1.627638] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/leds-aw2013.ko[0m
+[32m[    1.634683] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/leds-sgm3140.ko[0m
+[32m[    1.641430] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ledtrig-activity.ko[0m
+[32m[    1.648213] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ledtrig-backlight.ko[0m
+[32m[    1.655404] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ledtrig-camera.ko[0m
+[32m[    1.662604] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ledtrig-gpio.ko[0m
+[32m[    1.669902] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ledtrig-netdev.ko[0m
+[32m[    1.676589] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ledtrig-oneshot.ko[0m
+[32m[    1.683807] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ledtrig-pattern.ko[0m
+[32m[    1.690826] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ledtrig-transient.ko[0m
+[32m[    1.697939] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ledtrig-tty.ko[0m
+[32m[    1.705061] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/libarc4.ko[0m
+[32m[    1.712002] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/libchacha.ko[0m
+[32m[    1.718421] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/libchacha20poly1305.ko[0m
+[32m[    1.724847] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/libcrc32c.ko[0m
+[32m[    1.732484] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/libcurve25519-generic.ko[0m
+[32m[    1.738911] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/libcurve25519.ko[0m
+[32m[    1.746551] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/libdes.ko[0m
+[32m[    1.753492] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/libpoly1305.ko[0m
+[32m[    1.764788] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/lz4hc_compress.ko[0m
+[32m[    1.774171] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/macvlan.ko[0m
+[32m[    1.774282] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/macvtap.ko[0m
+[32m[    1.780251] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/max17042_battery.ko[0m
+[32m[    1.786655] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mc.ko[0m
+[32m[    1.793770] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mdt_loader.ko[0m
+[32m[    1.799935] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/melfas_mip4.ko[0m
+[32m[    1.806615] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mfd-core.ko[0m
+[32m[    1.813298] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mms114.ko[0m
+[32m[    1.823486] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/msg2638.ko[0m
+[32m[    1.826254] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt76-connac-lib.ko[0m
+[32m[    1.832575] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt76-usb.ko[0m
+[32m[    1.839696] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt76.ko[0m
+[32m[    1.846113] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt7601u.ko[0m
+[32m[    1.852291] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt7615-common.ko[0m
+[32m[    1.858787] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt7663-usb-sdio-common.ko[0m
+[32m[    1.865561] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt7663u.ko[0m
+[32m[    1.873543] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt76x0-common.ko[0m
+[32m[    1.879890] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt76x02-lib.ko[0m
+[32m[    1.886649] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt76x02-usb.ko[0m
+[32m[    1.893593] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt76x0u.ko[0m
+[32m[    1.900378] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt76x2-common.ko[0m
+[32m[    1.906790] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt76x2u.ko[0m
+[32m[    2.023038] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/nxp-nci.ko[0m
+[32m[    2.023162] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/nxp-nci_i2c.ko[0m
+[32m[    2.035720] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/pdr_interface.ko[0m
+[32m[    2.038285] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/pm8916_bms_vm.ko[0m
+[32m[    2.042116] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/pm8916_lbc.ko[0m
+[32m[    2.051745] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ppp_async.ko[0m
+[32m[    2.056009] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ppp_deflate.ko[0m
+[32m[    2.062318] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ppp_generic.ko[0m
+[32m[    2.069259] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ppp_mppe.ko[0m
+[32m[    2.076029] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ppp_synctty.ko[0m
+[32m[    2.082452] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/pppoe.ko[0m
+[32m[    2.089307] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/pppox.ko[0m
+[32m[    2.098152] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/qcom-camss.ko[0m
+[32m[    2.101654] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/qcom-rng.ko[0m
+[32m[    2.108588] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/qcom_bam_dmux.ko[0m
+[32m[    2.114927] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/qcom_common.ko[0m
+[32m[    2.121789] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/qcom_memshare.ko[0m
+[32m[    2.128730] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/qcom_pil_info.ko[0m
+[32m[    2.135490] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/qcom_q6v5.ko[0m
+[32m[    2.142442] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/qcom_q6v5_mss.ko[0m
+[32m[    2.149038] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/qcom_wcnss_pil.ko[0m
+[32m[    2.158618] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/r8712u.ko[0m
+[32m[    2.163285] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/rmnet.ko[0m
+[32m[    2.169657] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/rng-core.ko[0m
+[32m[    2.175597] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/rpmsg_wwan_ctrl.ko[0m
+[32m[    2.182204] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/rt5033-regulator.ko[0m
+[32m[    2.189403] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/rt5033.ko[0m
+[32m[    2.196515] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/rt5033_battery.ko[0m
+[32m[    2.203024] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/rtl8187.ko[0m
+[32m[    2.210055] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/rtl8xxxu.ko[0m
+[32m[    2.216392] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/s3fwrn5.ko[0m
+[32m[    2.222821] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/s3fwrn5_i2c.ko[0m
+[32m[    2.241746] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/slhc.ko[0m
+[32m[    2.250101] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/smb1360.ko[0m
+[32m[    2.250222] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/snd-hwdep.ko[0m
+[32m[    2.255631] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/snd-soc-aw8738.ko[0m
+[32m[    2.262050] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/snd-soc-max98357a.ko[0m
+[32m[    2.269338] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/snd-soc-msm8916-analog.ko[0m
+[32m[    2.276366] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/snd-soc-msm8916-digital.ko[0m
+[32m[    2.284353] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/snd-soc-simple-amplifier.ko[0m
+[32m[    2.292076] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/snd-soc-tfa989x.ko[0m
+[32m[    2.299884] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/snd-usb-audio.ko[0m
+[32m[    2.307084] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/snd-usbmidi-lib.ko[0m
+[32m[    2.313853] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/spi-bitbang.ko[0m
+[32m[    2.321157] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/spidev.ko[0m
+[32m[    2.334964] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/tap.ko[0m
+[32m[    2.335073] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/tm2-touchkey.ko[0m
+[32m[    2.340363] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ts_bm.ko[0m
+[32m[    2.347100] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ts_fsm.ko[0m
+[32m[    2.353270] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ts_kmp.ko[0m
+[32m[    2.359877] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/tun.ko[0m
+[32m[    2.373825] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/uhid.ko[0m
+[32m[    2.373933] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/usb_f_uvc.ko[0m
+[32m[    2.378992] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/usblp.ko[0m
+[32m[    2.385514] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/uvc.ko[0m
+[32m[    2.391739] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/uvcvideo.ko[0m
+[32m[    2.397989] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/v4l2-async.ko[0m
+[32m[    2.404422] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/v4l2-dv-timings.ko[0m
+[32m[    2.411270] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/v4l2-flash-led-class.ko[0m
+[32m[    2.418311] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/v4l2-fwnode.ko[0m
+[32m[    2.425778] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/v4l2-mem2mem.ko[0m
+[32m[    2.432630] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/venus-core.ko[0m
+[32m[    2.439395] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/venus-dec.ko[0m
+[32m[    2.446259] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/venus-enc.ko[0m
+[32m[    2.452595] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/veth.ko[0m
+[32m[    2.459185] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/videobuf2-common.ko[0m
+[32m[    2.465446] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/videobuf2-dma-contig.ko[0m
+[32m[    2.472652] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/videobuf2-dma-sg.ko[0m
+[32m[    2.480202] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/videobuf2-memops.ko[0m
+[32m[    2.487402] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/videobuf2-v4l2.ko[0m
+[32m[    2.494620] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/videobuf2-vmalloc.ko[0m
+[32m[    2.501815] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/videodev.ko[0m
+[32m[    2.508835] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/vkms.ko[0m
+[32m[    2.515435] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/vxlan.ko[0m
+[32m[    2.521594] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/wcn36xx.ko[0m
+[32m[    2.527763] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/wcnss_ctrl.ko[0m
+[32m[    2.534359] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/wireguard.ko[0m
+[32m[    2.709367] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/zinitix.ko[0m
+[32m[    2.709489] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/zram.ko[0m
+[32m[    2.724718] [0m[33minit[0m: - preinit -
+[32m[    4.683974] [0m[33mrandom[0m: crng init done
+[32m[    8.855703] [0m[33mmount_root[0m: mounting /dev/root
+[32m[    8.923171] [0m[33mEXT4-fs (mmcblk0p14)[0m: re-mounted ff313567-e9f1-5a5d-9895-3ba130b4a864 r/w. Quota mode: none.
+[32m[    8.930510] [0m[33murandom-seed[0m[1m: Seeding with /etc/urandom.seed[0m
+[32m[    8.984466] [0m[33mprocd[0m: - early -
+[32m[    8.984746] [0m[33mprocd[0m: - watchdog -
+[32m[    9.689199] [0m[33mprocd[0m: - watchdog -
+[32m[    9.689612] [0m[33mprocd[0m: - ubus -
+[32m[    9.743290] [0m[33mprocd[0m: - init -
+[32m[    9.931030] [0m[33murngd[0m: v1.0.2 started.
+[32m[    9.988132] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/apr.ko[0m
+[32m[    9.988328] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/arm_smccc_trng.ko[0m
+[32m[    9.993565] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/atmel_mxt_ts.ko[0m
+[32m[   10.001098] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/bsd_comp.ko[0m
+[32m[   10.007209] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/btbcm.ko[0m
+[32m[   10.013679] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/btintel.ko[0m
+[32m[   10.019880] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/btqca.ko[0m
+[32m[   10.026436] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/btqcomsmd.ko[0m
+[32m[   10.032516] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/btrtl.ko[0m
+[32m[   10.039128] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/btusb.ko[0m
+[32m[   10.045554] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/cdc-wdm.ko[0m
+[32m[   10.052272] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/cpufreq_conservative.ko[0m
+[32m[   10.058236] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/cpufreq_ondemand.ko[0m
+[32m[   10.065707] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/cpufreq_userspace.ko[0m
+[32m[   10.072908] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/crc-ccitt.ko[0m
+[32m[   10.080639] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/dm-bio-prison.ko[0m
+[32m[   10.086705] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/dm-bufio.ko[0m
+[32m[   10.093626] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/dm-crypt.ko[0m
+[32m[   10.100227] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/dm-persistent-data.ko[0m
+[32m[   10.106754] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/dm-thin-pool.ko[0m
+[32m[   10.114334] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/drm_shmem_helper.ko[0m
+[32m[   10.120981] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/dummy.ko[0m
+[32m[   10.128516] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/edt-ft5x06.ko[0m
+[32m[   10.134361] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/eeprom_93cx6.ko[0m
+[32m[   10.141973] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/fastrpc.ko[0m
+[32m[   10.148422] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/gud.ko[0m
+[32m[   10.154694] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/i2c-qcom-cci.ko[0m
+[32m[   10.163721] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ipvlan.ko[0m
+[32m[   10.167330] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/led-class-flash.ko[0m
+[32m[   10.173847] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/leds-aw2013.ko[0m
+[32m[   10.180880] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/leds-sgm3140.ko[0m
+[32m[   10.187643] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ledtrig-activity.ko[0m
+[32m[   10.194422] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ledtrig-backlight.ko[0m
+[32m[   10.201611] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ledtrig-camera.ko[0m
+[32m[   10.208851] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ledtrig-gpio.ko[0m
+[32m[   10.216138] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ledtrig-netdev.ko[0m
+[32m[   10.222836] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ledtrig-oneshot.ko[0m
+[32m[   10.230058] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ledtrig-pattern.ko[0m
+[32m[   10.237090] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ledtrig-transient.ko[0m
+[32m[   10.244152] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ledtrig-tty.ko[0m
+[32m[   10.251270] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/libarc4.ko[0m
+[32m[   10.258223] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/libchacha.ko[0m
+[32m[   10.264649] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/libchacha20poly1305.ko[0m
+[32m[   10.271073] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/libcrc32c.ko[0m
+[32m[   10.278694] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/libcurve25519-generic.ko[0m
+[32m[   10.285148] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/libcurve25519.ko[0m
+[32m[   10.292773] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/libdes.ko[0m
+[32m[   10.299735] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/libpoly1305.ko[0m
+[32m[   10.306492] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/lz4hc_compress.ko[0m
+[32m[   10.313213] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/macvlan.ko[0m
+[32m[   10.320112] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/macvtap.ko[0m
+[32m[   10.326462] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/max17042_battery.ko[0m
+[32m[   10.332897] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mc.ko[0m
+[32m[   10.340009] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mdt_loader.ko[0m
+[32m[   10.346161] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/melfas_mip4.ko[0m
+[32m[   10.352983] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mfd-core.ko[0m
+[32m[   10.359548] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mms114.ko[0m
+[32m[   10.366142] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/msg2638.ko[0m
+[32m[   10.372487] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt76-connac-lib.ko[0m
+[32m[   10.378803] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt76-usb.ko[0m
+[32m[   10.385910] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt76.ko[0m
+[32m[   10.392336] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt7601u.ko[0m
+[32m[   10.398489] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt7615-common.ko[0m
+[32m[   10.405006] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt7663-usb-sdio-common.ko[0m
+[32m[   10.411825] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt7663u.ko[0m
+[32m[   10.419770] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt76x0-common.ko[0m
+[32m[   10.426110] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt76x02-lib.ko[0m
+[32m[   10.432882] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt76x02-usb.ko[0m
+[32m[   10.439893] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt76x0u.ko[0m
+[32m[   10.446615] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt76x2-common.ko[0m
+[32m[   10.453022] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/mt76x2u.ko[0m
+[32m[   10.463741] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/nxp-nci.ko[0m
+[32m[   10.466375] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/nxp-nci_i2c.ko[0m
+[32m[   10.473108] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/pdr_interface.ko[0m
+[32m[   10.479745] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/pm8916_bms_vm.ko[0m
+[32m[   10.486351] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/pm8916_lbc.ko[0m
+[32m[   10.493497] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ppp_async.ko[0m
+[32m[   10.500255] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ppp_deflate.ko[0m
+[32m[   10.506615] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ppp_generic.ko[0m
+[32m[   10.513531] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ppp_mppe.ko[0m
+[32m[   10.520288] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ppp_synctty.ko[0m
+[32m[   10.526713] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/pppoe.ko[0m
+[32m[   10.533549] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/pppox.ko[0m
+[32m[   10.539825] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/qcom-camss.ko[0m
+[32m[   10.545904] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/qcom-rng.ko[0m
+[32m[   10.552835] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/qcom_bam_dmux.ko[0m
+[32m[   10.559174] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/qcom_common.ko[0m
+[32m[   10.566022] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/qcom_memshare.ko[0m
+[32m[   10.572980] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/qcom_pil_info.ko[0m
+[32m[   10.579756] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/qcom_q6v5.ko[0m
+[32m[   10.586753] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/qcom_q6v5_mss.ko[0m
+[32m[   10.593305] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/qcom_wcnss_pil.ko[0m
+[32m[   10.600405] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/r8712u.ko[0m
+[32m[   10.607519] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/rmnet.ko[0m
+[32m[   10.613863] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/rng-core.ko[0m
+[32m[   10.619861] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/rpmsg_wwan_ctrl.ko[0m
+[32m[   10.626445] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/rt5033-regulator.ko[0m
+[32m[   10.633655] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/rt5033.ko[0m
+[32m[   10.640760] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/rt5033_battery.ko[0m
+[32m[   10.647285] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/rtl8187.ko[0m
+[32m[   10.654322] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/rtl8xxxu.ko[0m
+[32m[   10.660668] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/s3fwrn5.ko[0m
+[32m[   10.667169] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/s3fwrn5_i2c.ko[0m
+[32m[   10.674331] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/slhc.ko[0m
+[32m[   10.680826] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/smb1360.ko[0m
+[32m[   10.686448] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/snd-hwdep.ko[0m
+[32m[   10.692939] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/snd-soc-aw8738.ko[0m
+[32m[   10.699369] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/snd-soc-max98357a.ko[0m
+[32m[   10.706663] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/snd-soc-msm8916-analog.ko[0m
+[32m[   10.713706] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/snd-soc-msm8916-digital.ko[0m
+[32m[   10.721675] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/snd-soc-simple-amplifier.ko[0m
+[32m[   10.729411] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/snd-soc-tfa989x.ko[0m
+[32m[   10.737262] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/snd-usb-audio.ko[0m
+[32m[   10.744427] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/snd-usbmidi-lib.ko[0m
+[32m[   10.751201] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/spi-bitbang.ko[0m
+[32m[   10.758473] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/spidev.ko[0m
+[32m[   10.765576] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/tap.ko[0m
+[32m[   10.771670] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/tm2-touchkey.ko[0m
+[32m[   10.777662] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ts_bm.ko[0m
+[32m[   10.784445] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ts_fsm.ko[0m
+[32m[   10.790592] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/ts_kmp.ko[0m
+[32m[   10.797199] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/tun.ko[0m
+[32m[   10.803842] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/uhid.ko[0m
+[32m[   10.809549] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/usb_f_uvc.ko[0m
+[32m[   10.815622] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/usblp.ko[0m
+[32m[   10.822121] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/uvc.ko[0m
+[32m[   10.828354] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/uvcvideo.ko[0m
+[32m[   10.834605] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/v4l2-async.ko[0m
+[32m[   10.841055] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/v4l2-dv-timings.ko[0m
+[32m[   10.847911] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/v4l2-flash-led-class.ko[0m
+[32m[   10.854926] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/v4l2-fwnode.ko[0m
+[32m[   10.862387] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/v4l2-mem2mem.ko[0m
+[32m[   10.869233] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/venus-core.ko[0m
+[32m[   10.876054] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/venus-dec.ko[0m
+[32m[   10.882876] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/venus-enc.ko[0m
+[32m[   10.889230] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/veth.ko[0m
+[32m[   10.895871] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/videobuf2-common.ko[0m
+[32m[   10.902084] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/videobuf2-dma-contig.ko[0m
+[32m[   10.909269] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/videobuf2-dma-sg.ko[0m
+[32m[   10.916803] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/videobuf2-memops.ko[0m
+[32m[   10.924039] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/videobuf2-v4l2.ko[0m
+[32m[   10.931227] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/videobuf2-vmalloc.ko[0m
+[32m[   10.938548] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/videodev.ko[0m
+[32m[   10.945500] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/vkms.ko[0m
+[32m[   10.952081] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/vxlan.ko[0m
+[32m[   10.958247] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/wcn36xx.ko[0m
+[32m[   10.964418] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/wcnss_ctrl.ko[0m
+[32m[   10.971001] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/wireguard.ko[0m
+[32m[   10.985750] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/zinitix.ko[0m
+[32m[   10.985904] [0m[33mkmodloader[0m[31m: failed to open /lib/modules/6.10.0/zram.ko[0m
+[32m[   11.577256] [0m[33mudevd[953][0m: starting version 3.2.10
+[32m[   11.584470] [0m[33mudevd[953][0m[31m: specified group 'tty' unknown[0m
+[32m[   11.584885] [0m[33mudevd[953][0m[31m: specified group 'kmem' unknown[0m
+[32m[   11.589064] [0m[33mudevd[953][0m[31m: specified group 'input' unknown[0m
+[32m[   11.593957] [0m[33mudevd[953][0m[31m: specified group 'video' unknown[0m
+[32m[   11.599435] [0m[33mudevd[953][0m[31m: specified group 'lp' unknown[0m
+[32m[   11.604248] [0m[33mudevd[953][0m[31m: specified group 'disk' unknown[0m
+[32m[   11.609378] [0m[33mudevd[953][0m[31m: specified group 'cdrom' unknown[0m
+[32m[   11.614405] [0m[33mudevd[953][0m[31m: specified group 'tape' unknown[0m
+[32m[   11.619548] [0m[33mudevd[953][0m[31m: specified group 'kvm' unknown[0m
+[32m[   11.670796] [0m[33mudevd[983][0m: starting eudev-3.2.10
+[32m[   13.061225] [0mfile system registered
+[32m[   13.186984] [0mread descriptors
+[32m[   13.187047] [0mread strings
+[32m[   15.138260] [0m[33mconfigfs-gadget.g1 gadget.0[0m: HOST MAC 9e:7b:d5:c0:4e:75
+[32m[   15.138320] [0m[33mconfigfs-gadget.g1 gadget.0[0m: MAC 62:51:95:1e:e0:2e
+[32m[   15.143646] [0m[33ml13[0m[31m: voltage operation not allowed[0m
+[32m[   98.860657] [0m[33madbd (12909)[0m[1m: /proc/12909/oom_adj is deprecated, please use /proc/12909/oom_score_adj instead.[0m
